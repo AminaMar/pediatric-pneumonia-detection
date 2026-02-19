@@ -15,6 +15,17 @@ Integration with Electronic Medical Records in Algeria
 - **Format:** JPEG, Grayscale
 - **Classes:** NORMAL vs PNEUMONIA (binary classification)
 
+### Clinical Context
+
+Pediatric pneumonia is a leading cause of mortality in children under 5 years old globally.
+Chest X-rays are a primary diagnostic tool but interpretation depends heavily on radiologist expertise.
+
+Automated detection can:
+- Support clinical decision-making
+- Reduce diagnosis time
+- Improve access in resource-limited regions (e.g., rural Algeria)
+
+
 ### Dataset Split
 | Split      | NORMAL | PNEUMONIA | Total |
 |------------|--------|-----------|-------|
@@ -36,8 +47,10 @@ Integration with Electronic Medical Records in Algeria
    - **Solution:** Class weights + selective data augmentation
 
 2. **Insufficient Validation Set** (only 16 images!)
-   - Too small for reliable model validation
-   - **Solution:** Re-split dataset to 70/15/15 ratio
+   
+    -The validation set (0.27% of total data) is statistically insufficient for reliable performance estimation.
+    - Too small for reliable model validation
+    - **Solution:** Re-split dataset to 70/15/15 ratio
 
 3. **Variable Image Dimensions**
    - Range: 384×127 to 2,916×2,713 pixels
@@ -59,6 +72,21 @@ Integration with Electronic Medical Records in Algeria
 - NORMAL images: Mean ~127, StdDev ~58
 - PNEUMONIA images: Mean ~135, StdDev ~54
 - Observation: PNEUMONIA images slightly brighter (white infiltrations)
+
+## 📊 Visualizations
+
+### 1. Class Distribution
+![Class Distribution](docs/images/01_class_distribution.png)
+
+### 2. Sample Images
+![Sample Images](docs/images/02_sample_images.png)
+
+### 3. Image Dimensions
+![Image Dimensions](docs/images/03_image_dimensions.png)
+
+### 4. Pixel Intensity Distribution
+![Pixel Distribution](docs/images/04_pixel_distribution.png)
+
 
 ---
 
