@@ -1,9 +1,9 @@
 # 📊 Data Preprocessing & Augmentation Report
 
-**Data Engineer:** Bouhmidi Amina Maroua  
+**Data Engineer:** Bouhmidi Amina Meroua  
 **Date:** February 20, 2026  
 **Project:** AI-Powered Early Pediatric Pneumonia Detection: Integration with Electronic Medical Records in Algeria  
-**Phase:** Days 3-4 - Data Preprocessing & Augmentation
+**Phase:** Data Preprocessing & Augmentation
 
 ---
 

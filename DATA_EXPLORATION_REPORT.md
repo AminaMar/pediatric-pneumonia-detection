@@ -1,6 +1,6 @@
 # 📊 Data Exploration Report - Pediatric Pneumonia Detection
 
-**Data Engineer:** Bouhmidi Amina Maroua  
+**Data Engineer:** Bouhmidi Amina Meroua  
 **Date:** 2026-02-18  
 **Project:** AI-Powered Early Pediatric Pneumonia Detection:
 Integration with Electronic Medical Records in Algeria
