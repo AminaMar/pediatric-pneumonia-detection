@@ -68,8 +68,7 @@ Analyzed 100 samples per class using three quality metrics:
 
 ### Results
 
-![Quality Analysis](../docs/images/05_quality_analysis.png)
-
+![Quality Analysis](docs/images/05_quality_analysis.png)
 **Decision:** Retained all images as quality was generally acceptable. Sharpness filtering can be applied if needed (10th percentile threshold identified).
 
 **Estimated gain:** +0.5% (if filtering applied)
@@ -138,8 +137,7 @@ Applied **only to training set** to increase diversity and prevent overfitting w
 
 ### Augmentation Examples
 
-![Augmentation Examples](../docs/images/06_augmentation_examples.png)
-
+![Augmentation Examples](docs/images/06_augmentation_examples.png)
 *Nine variations of a single NORMAL chest X-ray showing realistic augmentations*
 
 **Validation/Test Sets:**
@@ -174,7 +172,8 @@ def preprocess_image(img_path, img_size=224, normalize=True):
 
 ### Pipeline Validation
 
-![Preprocessing Pipeline](../docs/images/07_preprocessing_pipeline.png)
+![Preprocessing Pipeline](docs/images/07_preprocessing_pipeline.png)
+
 
 *Before/after comparison showing original → resized → normalized*
 
