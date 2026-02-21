@@ -113,11 +113,12 @@ pediatric-pneumonia-detection/
 │   ├── preprocessed/            # Organized dataset (not included)
 │   
 │
-├── 📸 docs/images/                  # All visualizations
-│   ├── 01-04_*.png             # Exploration phase
-│   ├── 05-07_*.png             # Preprocessing phase
-│   ├── 08-09_*.png             # Data loaders phase
-│   └── xray-heart.gif              # README banner
+├──  docs/
+│    ├── 📸 images/              # All visualizations
+│         ├── 01-04_*.png             # Exploration phase
+│         ├── 05-07_*.png             # Preprocessing phase
+│         ├── 08-09_*.png             # Data loaders phase
+│         └── xray-heart.gif              # README banner
 │
 ├── 📓 notebooks/
 │   ├── 01_Data_Exploration_EDA.ipynb
