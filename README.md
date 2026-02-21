@@ -113,7 +113,7 @@ pediatric-pneumonia-detection/
 │   ├── preprocessed/            # Organized dataset (not included)
 │   
 │
-├── 📸 figures/                  # All visualizations
+├── 📸 docs/images/                  # All visualizations
 │   ├── 01-04_*.png             # Exploration phase
 │   ├── 05-07_*.png             # Preprocessing phase
 │   ├── 08-09_*.png             # Data loaders phase
