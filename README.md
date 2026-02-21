@@ -250,7 +250,7 @@ Keras >= 2.10
 
 ## 📧 Contact
 
-**Bouhmidi Amina Maroua** - Data Engineer  
+**Bouhmidi Amina Meroua** - Data Engineer  
 📍 University of Saida, Algeria  
 📧 [GitHub](https://github.com/AminaMar)
 
