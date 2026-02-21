@@ -207,21 +207,21 @@ Keras >= 2.10
 - Analyzed 5,856 chest X-rays
 - Identified class imbalance (2.7:1)
 - Detected validation set issue (16 images → 878 images)
-- **Report:** [DATA_EXPLORATION_REPORT.md](reports/DATA_EXPLORATION_REPORT.md)
+- **Report:** [DATA_EXPLORATION_REPORT.md](DATA_EXPLORATION_REPORT.md)
 
 ### Phase 2: Preprocessing ✅
 - Reorganized dataset (70/15/15 stratified split)
 - Calculated optimal class weights (1.850 / 0.685)
 - Implemented intelligent data augmentation
 - Created preprocessing pipeline (224×224, normalized)
-- **Report:** [DATA_PREPROCESSING_REPORT.md](reports/DATA_PREPROCESSING_REPORT.md)
+- **Report:** [DATA_PREPROCESSING_REPORT.md](DATA_PREPROCESSING_REPORT.md)
 
 ### Phase 3: Data Loaders ✅
 - TensorFlow ImageDataGenerator configuration
 - Batch processing (32 images/batch)
 - Performance optimization (<0.5s/batch)
 - ML Engineer package created
-- **Report:** [DATA_LOADERS_REPORT.md](reports/DATA_LOADERS_REPORT.md)
+- **Report:** [DATA_LOADERS_REPORT.md](DATA_LOADERS_REPORT.md)
 
 ---
 
@@ -231,9 +231,9 @@ Keras >= 2.10
 
 | Document | Description |
 |----------|-------------|
-| [Data Exploration Report](reports/DATA_EXPLORATION_REPORT.md) | Phase 1: EDA & Analysis |
-| [Data Preprocessing Report](reports/DATA_PREPROCESSING_REPORT.md) | Phase 2: Pipeline & Augmentation |
-| [Data Loaders Report](reports/DATA_LOADERS_REPORT.md) | Phase 3: TensorFlow Integration |
+| [Data Exploration Report](DATA_EXPLORATION_REPORT.md) | Phase 1: EDA & Analysis |
+| [Data Preprocessing Report](DATA_PREPROCESSING_REPORT.md) | Phase 2: Pipeline & Augmentation |
+| [Data Loaders Report](DATA_LOADERS_REPORT.md) | Phase 3: TensorFlow Integration |
 | [Dataset Documentation](README.md) | Data structure & access |
 | [Notebooks](notebooks/) | Interactive code & experiments |
 
