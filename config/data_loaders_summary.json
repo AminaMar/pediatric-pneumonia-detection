@@ -1,0 +1,31 @@
+{
+  "phase": "Data Loaders \u2013 Days 5-6",
+  "status": "COMPLETE",
+  "generators": {
+    "training": 4099,
+    "validation": 878,
+    "test": 879
+  },
+  "configuration": {
+    "img_size": 224,
+    "batch_size": 32,
+    "color_mode": "grayscale",
+    "augmentation": "training_only"
+  },
+  "class_weights": {
+    "0": 1.8497292418772564,
+    "1": 0.6852223336676697
+  },
+  "performance": {
+    "time_per_batch_sec": 0.418,
+    "images_per_sec": 76.6,
+    "time_per_epoch_min": 0.9
+  },
+  "deliverables": [
+    "Training/Val/Test generators",
+    "Class weights",
+    "Python package (data_loader.py)",
+    "Performance metrics",
+    "Documentation"
+  ]
+}
