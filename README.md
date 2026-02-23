@@ -229,6 +229,8 @@ Keras >= 2.10
 
 ## 📖 Documentation
 
+## 📖 Documentation
+
 | Document | Description |
 |----------|-------------|
 | [Data Exploration Report](DATA_EXPLORATION_REPORT.md) | Phase 1: EDA & Analysis |
@@ -236,7 +238,9 @@ Keras >= 2.10
 | [Data Loaders Report](DATA_LOADERS_REPORT.md) | Phase 3: TensorFlow Integration |
 | [Dataset Documentation](README.md) | Data structure & access |
 | [Notebooks](notebooks/) | Interactive code & experiments |
-
+| [Multimodal Pneumonia Complete Report](Multimodal_Pneumonia_Complete_Report.pdf) | Final comprehensive project report |
+| [Topic Proposal 2](TOPIC_PROPOSAL_2.pdf) | Approved research proposal |
+| [Pneumonia Detection Guide v4.4](Pneumonia_Detection_Guide_v4-4.pdf) | Technical implementation guide |
 ---
 
 ## 🎓 Academic Context
