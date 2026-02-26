@@ -617,8 +617,8 @@ prediction = model.predict(preprocessed_image)
 
 ## 📖 Documentation
 
-| Document | Phase | Author |
-|----------|-------|--------|
+| Document | Author |
+|----------|--------|
 | [Data Exploration Report](data_engineering/reports/DATA_EXPLORATION_REPORT.md)  | Data Engineer |
 | [Data Preprocessing Report](data_engineering/reports/DATA_PREPROCESSING_REPORT.md)  | Data Engineer |
 | [Data Loaders Report](data_engineering/reports/DATA_LOADERS_REPORT.md) | Data Engineer |
@@ -653,8 +653,8 @@ Model files exceed GitHub's 25MB limit and are hosted on **Google Drive**.
 | Team Member | Contribution | Work Output |
 |-------------|-------------|-------------|
 | **Kassouar Fatima** | Project management | Coordination, planning, delivery |
-| **Bouhmidi Amina Meroua** | Data engineering (Days 1-6) | 3 reports, 9 figures, data loaders |
-| **Labani Nabila Nour El Houda** | Model training (Days 7-12) | 3 models, evaluation, Grad-CAM |
+| **Bouhmidi Amina Meroua** | Data engineering  | 3 reports, analyse, data loaders |
+| **Labani Nabila Nour El Houda** | Model training  | 3 models, evaluation, Grad-CAM |
 | **Miloudi Maroua Amira** | Business model | Clinical integration strategy |
 
 ---
