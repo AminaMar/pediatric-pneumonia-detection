@@ -68,7 +68,7 @@ Analyzed 100 samples per class using three quality metrics:
 
 ### Results
 
-![Quality Analysis](../docs/images/05_quality_analysis.png)
+![Quality Analysis](./docs/images/05_quality_analysis.png)
 **Decision:** Retained all images as quality was generally acceptable. Sharpness filtering can be applied if needed (10th percentile threshold identified).
 
 **Estimated gain:** +0.5% (if filtering applied)
@@ -183,6 +183,7 @@ def preprocess_image(img_path, img_size=224, normalize=True):
 - Efficient (faster than loading pre-processed files)
 
 ---
+
 
 
 
