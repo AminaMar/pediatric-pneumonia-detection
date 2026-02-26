@@ -229,7 +229,7 @@ Keras >= 2.10
 
 ## 📖 Documentation
 
-## 📖 Documentation
+
 
 | Document | Description |
 |----------|-------------|
