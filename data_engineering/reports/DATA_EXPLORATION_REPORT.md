@@ -76,16 +76,16 @@ Automated detection can:
 ## 📊 Visualizations
 
 ### 1. Class Distribution
-![Class Distribution](docs/images/01_class_distribution.png)
+![Class Distribution](./docs/images/01_class_distribution.png)
 
 ### 2. Sample Images
-![Sample Images](docs/images/02_sample_images.png)
+![Sample Images](./docs/images/02_sample_images.png)
 
 ### 3. Image Dimensions
-![Image Dimensions](docs/images/03_image_dimensions.png)
+![Image Dimensions](./docs/images/03_image_dimensions.png)
 
 ### 4. Pixel Intensity Distribution
-![Pixel Distribution](docs/images/04_pixel_distribution.png)
+![Pixel Distribution](./docs/images/04_pixel_distribution.png)
 
 
 ---
@@ -191,5 +191,6 @@ scripts/
 **Report Status:** ✅ Complete  
 **Ready for Preprocessing:** ✅ Yes  
 **Reviewed by:** Dr. Abderrahmane Khiat
+
 
 ---
