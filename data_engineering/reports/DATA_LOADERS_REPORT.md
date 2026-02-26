@@ -67,7 +67,7 @@ ImageDataGenerator(rescale=1./255)
 ```
 
 ### Batch Examples
-![Batch Examples](docs/images/08_batch_examples.png)
+![Batch Examples]((https://raw.githubusercontent.com/AminaMar/pediatric-pneumonia-detection/main/docs/images/08_batch_examples.png)
 
 *Sample batch showing augmented training images with correct labels*
 
@@ -75,7 +75,7 @@ ImageDataGenerator(rescale=1./255)
 
 ## 📈 Distribution Analysis
 
-![Distribution](docs/images/09_loader_distribution.png)
+![Distribution]((https://raw.githubusercontent.com/AminaMar/pediatric-pneumonia-detection/main/docs/images/09_loader_distribution.png)
 
 **Verified Distribution:**
 - Training: 27.0% NORMAL / 73.0% PNEUMONIA ✅
@@ -198,4 +198,5 @@ The ML Engineer can now:
 | Performance Testing | ✅ Complete | Optimized and validated |
 | ML Package | ✅ Complete | Ready for immediate use |
 | Documentation | ✅ Complete | This report |
+
 
