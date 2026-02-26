@@ -589,7 +589,7 @@ cd pediatric-pneumonia-detection
 
 Run notebooks in order:
 
-1. [01_Data_Exploration_EDA.ipynb](data_engineering/notebooks/01_Data_Exploration_EDA(1).ipynb)
+1. [01_Data_Exploration_EDA.ipynb](data_engineering/notebooks/01_Data_Exploration_EDA (1).ipynb)
 2. [02_Data_Preprocessing.ipynb](data_engineering/notebooks/02_Data_Preprocessing.ipynb)
 3. [03_Data_Loaders.ipynb](data_engineering/notebooks/03_Data_Loaders.ipynb)
 ```
