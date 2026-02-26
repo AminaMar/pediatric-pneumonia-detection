@@ -137,7 +137,7 @@ Applied **only to training set** to increase diversity and prevent overfitting w
 
 ### Augmentation Examples
 
-![Augmentation Examples](../docs/images/06_augmentation_examples.png)
+![Augmentation Examples](https://raw.githubusercontent.com/AminaMar/pediatric-pneumonia-detection/main/docs/images/06_augmentation_examples.png)
 *Nine variations of a single NORMAL chest X-ray showing realistic augmentations*
 
 **Validation/Test Sets:**
@@ -172,7 +172,7 @@ def preprocess_image(img_path, img_size=224, normalize=True):
 
 ### Pipeline Validation
 
-![Preprocessing Pipeline](../docs/images/07_preprocessing_pipeline.png)
+![Preprocessing Pipeline](https://raw.githubusercontent.com/AminaMar/pediatric-pneumonia-detection/main/docs/images/07_preprocessing_pipeline.png)
 
 
 *Before/after comparison showing original → resized → normalized*
@@ -183,6 +183,7 @@ def preprocess_image(img_path, img_size=224, normalize=True):
 - Efficient (faster than loading pre-processed files)
 
 ---
+
 
 
 
