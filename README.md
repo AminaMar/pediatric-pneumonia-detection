@@ -83,7 +83,7 @@ The pipeline spans three major pillars:
   <tr>
     <td>🔧 <b>Data Engineer & Repository Lead</b></td>
     <td><b>Bouhmidi Amina Meroua</b></td>
-    <td>Complete data pipeline (EDA → preprocessing → data loaders), 70/15/15 stratified split, class weight computation, augmentation design, 3 detailed engineering reports, repository architecture & documentation</td>
+    <td>Complete data pipeline (EDA → preprocessing → data loaders), 70/15/15 stratified split, class weight computation, augmentation design, 3 detailed engineering reports, repository architecture</td>
   </tr>
   <tr>
     <td>🤖 <b>Deep Learning Engineer</b></td>
@@ -93,7 +93,7 @@ The pipeline spans three major pillars:
   <tr>
     <td>💻 Fullstack Developer & Business Model</td>
     <td>Miloudi Maroua Amira</td>
-    <td>Streamlit application architecture, full UI/UX design, clinical workflow integration, business model & deployment strategy</td>
+    <td>Full Streamlit application development (architecture, UI/UX, all pages), clinical workflow integration, business model & deployment strategy</td>
   </tr>
   <tr>
     <td>🩺 ML Engineer</td>
@@ -407,9 +407,9 @@ External Dataset Validation (488 independent images)
 
 ## 🖥️ Clinical Application
 
-**Full-Stack Streamlit Application — Team Effort**
+**Full-Stack Streamlit Application — Developed by Miloudi Maroua Amira** ([@lily01011](https://github.com/lily01011))
 
-The clinical application integrates both AI models into a complete, production-grade decision support system deployable in any clinic with Python — no database server required.
+The clinical application was built and designed by Miloudi Maroua Amira, integrating the AI models trained by Labani Nabila and the preprocessed data pipeline built by Bouhmidi Amina into a complete, production-grade clinical decision support system deployable in any clinic with Python — no database server required.
 
 ### Dual AI Diagnostic Pathways
 
@@ -782,12 +782,13 @@ Model files exceed GitHub's 25MB limit and are hosted on **Google Drive**.
 
 ### Team Contribution Summary
 
-| Member | Domain | Key Deliverables |
-|---|---|---|
-| **Bouhmidi Amina Meroua** | Data Engineering | 3 engineering reports, EDA, 70/15/15 split, class weights (1.850/0.685), augmentation pipeline, TF data loaders |
-| **Labani Nabila Nour El Houda** | Deep Learning | 3 trained models, threshold optimization (0.260), GradCAM, external validation (97.21% sensitivity) |
-| Miloudi Maroua Amira | Fullstack & Business | Complete Streamlit app architecture, UI/UX, EMR integration strategy |
-| Kassouar Fatima | ML & Vital Signs | Gradient Boosting classifier, whyvitals.py medical explanation engine |
+| Member | Key Deliverables |
+|---|---|
+| **Bouhmidi Amina Meroua** ⭐ | EDA, 70/15/15 stratified split, scientifically computed class weights (1.850/0.685), anatomically-constrained augmentation, optimized TF data loaders, repository lead |
+| **Labani Nabila Nour El Houda** ⭐ | 3 trained CNN models (VGG16/ResNet50/DenseNet121), ROC threshold optimization (0.260), GradCAM clinical heatmaps, external validation (**97.21% sensitivity**) |
+| Miloudi Maroua Amira | Complete Streamlit clinical application, UI/UX design, EMR integration strategy |
+| Kassouar Fatima | Gradient Boosting vital signs classifier, whyvitals.py medical explanation engine |
+| Dr. Abderrahmane Khiat | Academic supervision |
 
 ---
 
@@ -839,7 +840,8 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 ## 📧 Contact
 
 **Data Engineer & Repository Lead:** Bouhmidi Amina Meroua — [GitHub @AminaMar](https://github.com/AminaMar)  
-**Deep Learning Engineer:** Labani Nabila Nour El Houda — [GitHub @labaninabila193-code](https://github.com/labaninabila193-code)
+**Deep Learning Engineer:** Labani Nabila Nour El Houda — [GitHub @labaninabila193-code](https://github.com/labaninabila193-code)  
+**Fullstack Developer:** Miloudi Maroua Amira — [GitHub @lily01011](https://github.com/lily01011)
 
 **Project Repository:** [github.com/AminaMar/pediatric-pneumonia-detection](https://github.com/AminaMar/pediatric-pneumonia-detection)
 
