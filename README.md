@@ -96,7 +96,7 @@ The pipeline spans three major pillars:
     <td>Full Streamlit application development (architecture, UI/UX, all pages), clinical workflow integration, business model & deployment strategy</td>
   </tr>
   <tr>
-    <td>🩺Manager & ML Engineer</td>
+    <td>🩺 ML Engineer</td>
     <td>Kassouar Fatima</td>
     <td>Gradient Boosting classifier (vital signs), CSV preprocessing pipeline, medical explanation engine (whyvitals.py)</td>
   </tr>
@@ -204,12 +204,18 @@ A dual-pathway AI system with a full clinical application:
   </tr>
   <tr>
     <td>🖥️ Clinical Streamlit Application</td>
-    <td>Miloudi Maroua Amira</td>
+    <td>Full Team</td>
     <td>✅ Complete</td>
     <td>████████████ 100%</td>
     <td>Doctor onboarding, patient management, dual AI diagnostics, treatment module, nurse monitoring</td>
   </tr>
-  
+  <tr>
+    <td>📝 Documentation</td>
+    <td>Bouhmidi Amina Meroua & Labani Nabila</td>
+    <td>✅ Complete</td>
+    <td>████████████ 100%</td>
+    <td>3 engineering reports, complete final report, technical guide</td>
+  </tr>
 </table>
 
 ---
@@ -361,7 +367,7 @@ A dual-pathway AI system with a full clinical application:
 
 ## 🤖 Model Training
 
-**Lead: Labani Nabila Nour El Houda**
+**Lead: Labani Nabila Nour El Houda** ([@labaninabila193-code](https://github.com/labaninabila193-code))
 
 ### Methodology
 ```
@@ -396,6 +402,61 @@ External Dataset Validation (488 independent images)
 - **Early Stopping:** Patience = 7 epochs
 - **Batch Size:** 32
 - **Class Weights:** {0: 1.850, 1: 0.685} — provided by Data Engineer
+
+---
+
+## 🌿 Vital Signs ML Module
+
+**Lead: Kassouar Fatima**
+
+Kassouar Fatima developed the machine learning pipeline for vital signs-based pneumonia classification, building the Gradient Boosting model and the complete medical explanation engine integrated into the clinical application.
+
+### Gradient Boosting Classifier
+
+| Attribute | Detail |
+|---|---|
+| **File** | `models/Gradient_Boost.pkl` |
+| **Framework** | scikit-learn 1.6.1 (serialized via joblib) |
+| **Input** | 12-feature encoded vector (categoricals + numerics) |
+| **Output** | Binary class (0 = Not Sick, 1 = Sick) + probability score |
+| **Top feature** | Confusion — **64.8% importance** |
+
+**Feature Importance Ranking:**
+
+| Rank | Feature | Importance |
+|---|---|---|
+| 1 | Confusion | **64.8%** |
+| 2 | Fever severity | 12.9% |
+| 3 | Temperature | 9.2% |
+| 4–12 | Remaining 9 features | 13.1% combined |
+
+### Medical Explanation Engine — `whyvitals.py`
+
+A standalone pure-Python medical knowledge base with zero UI dependencies:
+
+- **`FEATURE_EXPLANATIONS`** — maps every `(feature, value)` pair to a clinical note + literature reference (WHO IMCI, IDSA/ATS, BTS, NEJM EPIC study)
+- **`INTERACTION_EXPLANATIONS`** — lambda-based rules detecting clinically significant multi-feature combinations (e.g., high fever + purulent sputum → bacterial pneumonia pattern)
+- **`SCORE_WEIGHTS`** — mirrors model feature importance for the 0–100 risk score
+- **`explain()`** — returns: verdict, score, summary, tags, interaction notes, per-feature explanations
+
+> `whyvitals.py` is fully testable independently of the Streamlit UI — it can be imported into any Python context (REST API, CLI, unit tests) without modification.
+
+### Input Features (12 Parameters)
+
+| # | Feature | Type |
+|---|---|---|
+| 1 | Gender | Categorical |
+| 2 | Age (1–16) | Integer |
+| 3 | Cough type | Categorical |
+| 4 | Fever severity | Categorical |
+| 5 | Shortness of breath | Boolean |
+| 6 | Chest pain | Boolean |
+| 7 | Fatigue | Boolean |
+| 8 | **Confusion** | Boolean (top feature: 64.8%) |
+| 9 | Oxygen saturation (SpO₂) | Float |
+| 10 | Crackles | Boolean |
+| 11 | Sputum color | Categorical |
+| 12 | Temperature | Float |
 
 ---
 
@@ -778,8 +839,8 @@ Model files exceed GitHub's 25MB limit and are hosted on **Google Drive**.
 
 | Member | Key Deliverables |
 |---|---|
-| **Bouhmidi Amina Meroua**  | EDA, 70/15/15 stratified split, scientifically computed class weights (1.850/0.685), anatomically-constrained augmentation, optimized TF data loaders, repository lead |
-| **Labani Nabila Nour El Houda**  | 3 trained CNN models (VGG16/ResNet50/DenseNet121), ROC threshold optimization (0.260), GradCAM clinical heatmaps, external validation (**97.21% sensitivity**) |
+| **Bouhmidi Amina Meroua** ⭐ | EDA, 70/15/15 stratified split, scientifically computed class weights (1.850/0.685), anatomically-constrained augmentation, optimized TF data loaders, repository lead |
+| **Labani Nabila Nour El Houda** ⭐ | 3 trained CNN models (VGG16/ResNet50/DenseNet121), ROC threshold optimization (0.260), GradCAM clinical heatmaps, external validation (**97.21% sensitivity**) |
 | Miloudi Maroua Amira | Complete Streamlit clinical application, UI/UX design, EMR integration strategy |
 | Kassouar Fatima | Gradient Boosting vital signs classifier, whyvitals.py medical explanation engine |
 | Dr. Abderrahmane Khiat | Academic supervision |
