@@ -96,7 +96,7 @@ The pipeline spans three major pillars:
     <td>Full Streamlit application development (architecture, UI/UX, all pages), clinical workflow integration, business model & deployment strategy</td>
   </tr>
   <tr>
-    <td>🩺 ML Engineer</td>
+    <td>🩺Manager & ML Engineer</td>
     <td>Kassouar Fatima</td>
     <td>Gradient Boosting classifier (vital signs), CSV preprocessing pipeline, medical explanation engine (whyvitals.py)</td>
   </tr>
@@ -204,18 +204,12 @@ A dual-pathway AI system with a full clinical application:
   </tr>
   <tr>
     <td>🖥️ Clinical Streamlit Application</td>
-    <td>Full Team</td>
+    <td>Miloudi Maroua Amira</td>
     <td>✅ Complete</td>
     <td>████████████ 100%</td>
     <td>Doctor onboarding, patient management, dual AI diagnostics, treatment module, nurse monitoring</td>
   </tr>
-  <tr>
-    <td>📝 Documentation</td>
-    <td>Bouhmidi Amina Meroua & Labani Nabila</td>
-    <td>✅ Complete</td>
-    <td>████████████ 100%</td>
-    <td>3 engineering reports, complete final report, technical guide</td>
-  </tr>
+  
 </table>
 
 ---
