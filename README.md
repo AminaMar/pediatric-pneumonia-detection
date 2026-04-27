@@ -8,13 +8,15 @@
   <img src="https://img.shields.io/badge/Python-3.10+-blue.svg?style=for-the-badge&logo=python" alt="Python">
   <img src="https://img.shields.io/badge/TensorFlow-2.19-orange.svg?style=for-the-badge&logo=tensorflow" alt="TensorFlow">
   <img src="https://img.shields.io/badge/Keras-3.x-red.svg?style=for-the-badge&logo=keras" alt="Keras">
+  <img src="https://img.shields.io/badge/Streamlit-Latest-FF4B4B.svg?style=for-the-badge&logo=streamlit" alt="Streamlit">
   <img src="https://img.shields.io/badge/Status-Complete-success.svg?style=for-the-badge" alt="Status">
+  <img src="https://img.shields.io/badge/Sensitivity-97.21%25-success.svg?style=for-the-badge" alt="Sensitivity">
   <img src="https://img.shields.io/badge/Accuracy-94.31%25-success.svg?style=for-the-badge" alt="Accuracy">
   <img src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" alt="License">
 </p>
 
 <h3 align="center">AI-Powered Early Pediatric Pneumonia Detection: Integration with Electronic Medical Records in Algeria</h3>
-<p align="center">Leveraging Transfer Learning and Strategic Data Engineering for Clinical-Grade AI</p>
+<p align="center">Leveraging Transfer Learning, Strategic Data Engineering, and Full-Stack Clinical Application Development</p>
 
 ---
 
@@ -27,6 +29,7 @@
 - [Dataset](#-dataset)
 - [Data Engineering Pipeline](#-data-engineering-pipeline)
 - [Model Training](#-model-training)
+- [Clinical Application](#-clinical-application)
 - [Results](#-results)
 - [Model Comparison](#-model-comparison)
 - [External Validation](#-external-validation)
@@ -43,22 +46,29 @@
 
 ## 🔍 Overview
 
-This project develops a **CNN-based pneumonia detection system** using transfer learning on pediatric chest X-rays. The complete end-to-end pipeline includes:
+This project delivers a **complete, end-to-end AI-powered clinical decision support system** for pediatric pneumonia detection, from raw data engineering through to a fully deployed Streamlit application used by clinicians in real time.
 
-**Phase 1: Data Engineering** 
-- 🔧 Data exploration and quality analysis
-- 🔧 Dataset preprocessing and reorganization
-- 🔧 Class balancing with optimal weight calculation
-- 🔧 Intelligent data augmentation pipeline
-- 🔧 Optimized TensorFlow data loaders
+The pipeline spans three major pillars:
 
-**Phase 2: Model Training** 
-- 🤖 Transfer learning (VGG16, ResNet50, DenseNet121)
-- 🤖 Comprehensive model evaluation
-- 🤖 External dataset validation
-- 🤖 Clinical interpretability (Grad-CAM)
+**Pillar 1 — Data Engineering** *(Bouhmidi Amina Meroua)*
+- Complete EDA on 5,863 pediatric chest X-rays
+- Dataset reorganization with stratified 70/15/15 split
+- Scientifically computed class weights and intelligent augmentation
+- Optimized TensorFlow data loaders for GPU training
 
-> **Key Achievement:** DenseNet121 achieved **95.01% Sensitivity** and **94.31% Accuracy** on the test set, with **97.21% Sensitivity** on external validation — demonstrating strong real-world generalization.
+**Pillar 2 — Model Training & Deep Learning** *(Labani Nabila Nour El Houda)*
+- Transfer learning pipeline across VGG16, ResNet50, and DenseNet121
+- Threshold optimization via ROC analysis (0.5 → 0.260)
+- GradCAM clinical interpretability implementation
+- External cross-dataset validation achieving **97.21% sensitivity**
+
+**Pillar 3 — Full-Stack Clinical Application** *(Team)*
+- Streamlit-based clinical decision support application
+- Dual AI diagnostic pathways: DenseNet121 (X-ray) + Gradient Boosting (vital signs)
+- Complete doctor/patient management with zero-infrastructure file-based persistence
+- Real-time nurse monitoring, treatment planning, and PDF report generation
+
+> **Key Achievement:** DenseNet121 achieved **95.01% Sensitivity** and **94.31% Accuracy** on the internal test set, improving to **97.21% Sensitivity** on external validation. The full clinical application integrates both the deep learning model and a Gradient Boosting vital signs classifier into a production-grade Streamlit interface.
 
 ---
 
@@ -68,37 +78,41 @@ This project develops a **CNN-based pneumonia detection system** using transfer 
   <tr>
     <td align="center"><b>Role</b></td>
     <td align="center"><b>Name</b></td>
-    <td align="center"><b>Responsibilities</b></td>
+    <td align="center"><b>Core Responsibilities</b></td>
   </tr>
   <tr>
-    <td>📊 Project Manager</td>
-    <td>Kassouar Fatima</td>
-    <td>Coordination, planning, delivery</td>
+    <td>🔧 <b>Data Engineer & Repository Lead</b></td>
+    <td><b>Bouhmidi Amina Meroua</b></td>
+    <td>Complete data pipeline (EDA → preprocessing → data loaders), 70/15/15 stratified split, class weight computation, augmentation design, 3 detailed engineering reports, repository architecture & documentation</td>
   </tr>
   <tr>
-    <td>🔧 Data Engineer</td>
-    <td>Bouhmidi Amina Meroua</td>
-    <td>Preprocessing, augmentation, data loaders</td>
+    <td>🤖 <b>Deep Learning Engineer</b></td>
+    <td><b>Labani Nabila Nour El Houda</b></td>
+    <td>DenseNet121 / VGG16 / ResNet50 training, threshold optimization (0.260), GradCAM implementation, external dataset validation (97.21% sensitivity), X-ray diagnostic module in app</td>
   </tr>
   <tr>
-    <td>🤖 ML Engineer</td>
-    <td>Labani Nabila Nour El Houda</td>
-    <td>Model training, evaluation, optimization</td>
-  </tr>
-  <tr>
-    <td>💼 Business Model</td>
+    <td>💻 Fullstack Developer & Business Model</td>
     <td>Miloudi Maroua Amira</td>
-    <td>Clinical integration, deployment strategy</td>
+    <td>Streamlit application architecture, full UI/UX design, clinical workflow integration, business model & deployment strategy</td>
+  </tr>
+  <tr>
+    <td>🩺 ML Engineer</td>
+    <td>Kassouar Fatima</td>
+    <td>Gradient Boosting classifier (vital signs), CSV preprocessing pipeline, medical explanation engine (whyvitals.py)</td>
   </tr>
   <tr>
     <td>👨‍🏫 Academic Supervisor</td>
     <td>Dr. Abderrahmane Khiat</td>
     <td>Academic guidance & evaluation</td>
   </tr>
+  <tr>
+    <td>🏥 Medical Advisor</td>
+    <td>Dr. Aimer Mohammed Djamel Eddine</td>
+    <td>Clinical validation, medical references & advisory</td>
+  </tr>
 </table>
 
-**Institution:** University of Saida, Algeria  
-**Period:** February 2026
+**Institution:** University of Saida, Algeria — Academic Year 2025–2026
 
 ---
 
@@ -106,27 +120,26 @@ This project develops a **CNN-based pneumonia detection system** using transfer 
 
 Pneumonia is a **leading cause of death** in children under 5:
 - 📊 **740,000+ deaths** annually worldwide (15% of child mortality)
-- 🏥 **200-300 cases daily** in Algerian emergency departments
-- ⏱️ **6-24 hour** diagnostic delays
-- 👨‍⚕️ **Severe shortage** of pediatric radiologists (~1 per 500,000 children)
-- 🚗 **40% of children** travel 50-100 km for X-ray access
+- 🏥 **200–300 cases daily** in Algerian emergency departments
+- ⏱️ **6–24 hour** diagnostic delays due to radiologist shortage
+- 👨‍⚕️ **~1 pediatric radiologist per 500,000 children** — a 500× deficiency vs. developed nations
+- 🚗 **40% of children** must travel 50–100 km to access chest X-ray imaging
+- 📉 **70–85% radiologist agreement** on pneumonia diagnosis — significant inter-observer error
 
 ---
 
 ## 💡 Solution
 
-AI-powered detection system through:
-- 🧠 **Transfer Learning** (VGG16/ResNet50/DenseNet121)
-- ⚖️ **Strategic Class Balancing** (weights: 1.850 / 0.685)
-- 🎨 **Intelligent Data Augmentation**
-- 🏥 **EMR Integration Ready** (HL7/FHIR standards)
+A dual-pathway AI system with a full clinical application:
 
-**Technical Approach:**
-- 🔧 Strategic data engineering (preprocessing, class balancing, augmentation)
-- 🤖 Transfer learning with ImageNet pretrained weights
-- ⚖️ Optimal class weights (1.850 / 0.685) calculated via sklearn
-- 📊 Cross-dataset validation for real-world generalization
-- 🔥 Grad-CAM visualizations for clinical interpretability
+- 🧠 **Deep Learning** — DenseNet121 fine-tuned on 5,856 pediatric chest X-rays (95.01% sensitivity)
+- 🌿 **Machine Learning** — Gradient Boosting classifier on 12 vital sign parameters
+- 🔥 **GradCAM Explainability** — Clinical heatmaps showing which lung regions influenced each decision
+- ⚖️ **Strategic Class Balancing** — Computed weights (1.850 / 0.685) via sklearn
+- 🎨 **Intelligent Data Augmentation** — Anatomically-constrained (no vertical flips)
+- 🏥 **EMR Integration Ready** — HL7/FHIR compatible architecture
+- 🖥️ **Full Clinical Application** — Streamlit app: patient registration, dual AI diagnostics, treatment planning, nurse monitoring
+- 🗄️ **Zero-Infrastructure Deployment** — File-based persistence, no database server required
 
 ---
 
@@ -135,66 +148,73 @@ AI-powered detection system through:
 <table>
   <tr>
     <th>Phase</th>
-    <th>Owner</th>
+    <th>Lead</th>
     <th>Status</th>
     <th>Progress</th>
     <th>Deliverables</th>
   </tr>
   <tr>
     <td>📊 Data Exploration</td>
-    <td>Data Engineer</td>
+    <td>Bouhmidi Amina Meroua</td>
     <td>✅ Complete</td>
     <td>████████████ 100%</td>
-    <td>EDA Report, Figures 01-04</td>
+    <td>EDA Report, Figures 01–04</td>
   </tr>
   <tr>
     <td>🔧 Data Preprocessing</td>
-    <td>Data Engineer</td>
+    <td>Bouhmidi Amina Meroua</td>
     <td>✅ Complete</td>
     <td>████████████ 100%</td>
-    <td>Preprocessed Dataset, Figures 05-07</td>
+    <td>Preprocessed Dataset, Figures 05–07, preprocessing_config.json</td>
   </tr>
   <tr>
     <td>📦 Data Loaders</td>
-    <td>Data Engineer</td>
+    <td>Bouhmidi Amina Meroua</td>
     <td>✅ Complete</td>
     <td>████████████ 100%</td>
-    <td>TF Generators, ML Package</td>
+    <td>TF Generators, data_loader.py, data_loaders_summary.json</td>
   </tr>
   <tr>
-    <td>🤖 Model Training</td>
-    <td>ML Engineer</td>
+    <td>🤖 Model Training (×3)</td>
+    <td>Labani Nabila Nour El Houda</td>
     <td>✅ Complete</td>
     <td>████████████ 100%</td>
-    <td>3 Trained Models</td>
+    <td>VGG16, ResNet50, DenseNet121 trained models</td>
   </tr>
   <tr>
-    <td>📈 Model Evaluation</td>
-    <td>ML Engineer</td>
+    <td>📈 Model Evaluation & Optimization</td>
+    <td>Labani Nabila Nour El Houda</td>
     <td>✅ Complete</td>
     <td>████████████ 100%</td>
-    <td>Metrics & Analysis</td>
+    <td>ROC analysis, threshold 0.260, full metrics report</td>
   </tr>
   <tr>
-    <td>🔥 Grad-CAM Visualization</td>
-    <td>ML Engineer</td>
+    <td>🔥 Grad-CAM Interpretability</td>
+    <td>Labani Nabila Nour El Houda</td>
     <td>✅ Complete</td>
     <td>████████████ 100%</td>
-    <td>Clinical Heatmaps</td>
+    <td>Clinical heatmaps, GradCAM module</td>
   </tr>
   <tr>
-    <td>🌍 External Validation</td>
-    <td>ML Engineer</td>
+    <td>🌍 External Dataset Validation</td>
+    <td>Labani Nabila Nour El Houda</td>
     <td>✅ Complete</td>
     <td>████████████ 100%</td>
-    <td>Cross-Dataset Test</td>
+    <td>97.21% sensitivity on independent dataset</td>
+  </tr>
+  <tr>
+    <td>🖥️ Clinical Streamlit Application</td>
+    <td>Full Team</td>
+    <td>✅ Complete</td>
+    <td>████████████ 100%</td>
+    <td>Doctor onboarding, patient management, dual AI diagnostics, treatment module, nurse monitoring</td>
   </tr>
   <tr>
     <td>📝 Documentation</td>
-    <td>Both</td>
+    <td>Bouhmidi Amina Meroua & Labani Nabila</td>
     <td>✅ Complete</td>
     <td>████████████ 100%</td>
-    <td>Complete Reports</td>
+    <td>3 engineering reports, complete final report, technical guide</td>
   </tr>
 </table>
 
@@ -209,7 +229,7 @@ AI-powered detection system through:
 - **Patients:** Pediatric patients aged 1–5 years
 - **Imbalance Ratio:** 2.7:1 (PNEUMONIA:NORMAL)
 
-### Preprocessed Dataset (70/15/15 Split)
+### Preprocessed Dataset (70/15/15 Stratified Split)
 
 <table>
   <tr>
@@ -245,7 +265,7 @@ AI-powered detection system through:
 **Configuration:**
 - 📏 Image size: 224×224 pixels
 - 🎨 Format: Grayscale, normalized [0-1]
-- 🔄 Augmentation: Rotation (±15°), Shift (10%), Zoom (10%), Horizontal flip
+- 🔄 Augmentation: Rotation (±15°), Shift (10%), Zoom (10%), Horizontal flip only
 
 ### External Validation Dataset
 - **Source:** [Pneumonia Radiography Dataset](https://www.kaggle.com/datasets/iamtanmayshukla/pneumonia-radiography-dataset)
@@ -256,119 +276,120 @@ AI-powered detection system through:
 
 ## 🔧 Data Engineering Pipeline
 
-**By Bouhmidi Amina Meroua** | 
+**Lead: Bouhmidi Amina Meroua**
 
-### Phase 1: Exploration ✅
-**Objective:** Understand dataset structure, identify issues
+### Phase 1 — Data Exploration ✅
+
+**Objective:** Understand dataset structure, identify quality issues
 
 **Key Findings:**
 - Total images: 5,863 (1,583 NORMAL, 4,273 PNEUMONIA)
 - Class imbalance: 2.7:1 ratio (PNEUMONIA:NORMAL)
-- **Critical issue:** Validation set only 16 images (0.3%) → unusable
-- Variable image dimensions (384×127 to 2,916×2,713 pixels)
-- Pixel intensity differences between classes
+- **Critical issue detected:** Original validation set only 16 images (0.3%) → statistically unusable
+- Variable image dimensions: 384×127 px to 2,916×2,713 px
+- Measurable pixel intensity differences between classes
 
 **Deliverables:**
 - [Exploration Report](data_engineering/reports/DATA_EXPLORATION_REPORT.md)
-- Figures 01-04 (distribution, samples, dimensions, pixels)
+- Figures 01–04: distribution analysis, sample review, dimension mapping, pixel statistics
 
 ---
 
-### Phase 2: Preprocessing ✅
-**Objective:** Reorganize dataset, balance classes, create preprocessing pipeline
+### Phase 2 — Preprocessing ✅
+
+**Objective:** Reorganize dataset, balance classes, build preprocessing pipeline
 
 **Actions Taken:**
+
 1. **Dataset Reorganization**
    - Created 70/15/15 stratified split
-   - Validation set: 16 → 878 images (54× increase)
-   - Maintained class distribution (27%/73%) across all splits
+   - Validation set: 16 → 878 images (**54× increase**)
+   - Class distribution (27%/73%) maintained across all three splits
 
 2. **Class Weight Calculation**
-   - Used sklearn `compute_class_weight('balanced')`
-   - NORMAL (0): 1.850
-   - PNEUMONIA (1): 0.685
-   - Forces model to give 2.7× more attention to minority class
+   - Method: `sklearn.utils.class_weight.compute_class_weight('balanced')`
+   - NORMAL (class 0): **1.850** — forces model to penalize missed normals
+   - PNEUMONIA (class 1): **0.685**
+   - Result: model gives 2.7× more learning attention to the minority class
 
-3. **Data Augmentation Design**
-   - Rotation: ±15° (realistic patient positioning)
-   - Shifts: 10% horizontal/vertical
+3. **Augmentation Strategy** (anatomically constrained)
+   - Rotation: ±15° (realistic patient positioning variation)
+   - Horizontal/vertical shifts: 10%
    - Zoom: 10%
-   - Horizontal flip: Yes (lungs are symmetric)
-   - Vertical flip: **NO** (anatomically incorrect)
-   - Applied **only** to training set
+   - Horizontal flip: ✅ (lungs are symmetric)
+   - Vertical flip: ❌ (anatomically incorrect — never applied)
+   - Applied **only to training set** — validation/test are untouched
 
 4. **Preprocessing Pipeline**
-   - Resize: 224×224 (standard for pretrained models)
-   - Normalize: [0-255] → [0-1]
+   - Resize: 224×224 (required by ImageNet pretrained architectures)
+   - Normalize: [0–255] → [0–1] float32
    - Format: Grayscale (224, 224, 1)
 
 **Deliverables:**
 - [Preprocessing Report](data_engineering/reports/DATA_PREPROCESSING_REPORT.md)
-- Figures 05-07 (quality, augmentation, pipeline)
+- Figures 05–07: quality checks, augmentation samples, pipeline diagram
 - `preprocessing_config.json`
 
 ---
 
-### Phase 3: Data Loaders ✅
-**Objective:** Create optimized TensorFlow generators for GPU training
+### Phase 3 — Data Loaders ✅
+
+**Objective:** Build optimized TensorFlow generators for GPU training
 
 **Implementation:**
-- TensorFlow `ImageDataGenerator` with augmentation
+- `tf.keras.preprocessing.image.ImageDataGenerator` with full augmentation pipeline
 - Batch size: 32 images
-- Training: Shuffle enabled + augmentation
-- Validation/Test: No shuffle, no augmentation
-- Performance: <0.5 seconds per batch
+- Training: shuffle enabled + augmentation active
+- Validation / Test: no shuffle, no augmentation (clean evaluation)
+- **Performance: <0.5 seconds per batch** on T4 GPU
 
 **Deliverables:**
 - [Data Loaders Report](data_engineering/reports/DATA_LOADERS_REPORT.md)
-- Figures 08-09 (batch examples, distribution)
-- `data_loader.py` (reusable Python package)
+- Figures 08–09: batch sample visualization, class distribution per split
+- `data_loader.py` — reusable, importable Python package
 - `data_loaders_summary.json`
 
 ---
 
 ### 📊 Data Engineering Impact
 
-**Key Contributions:**
-- ✅ Validation set increased by **54×** (16 → 878 images)
-- ✅ Class weights scientifically calculated via sklearn
-- ✅ Augmentation respects anatomical constraints
-- ✅ Pipeline optimized for GPU training (<0.5s/batch)
-- ✅ Complete documentation (3 detailed reports)
+| Contribution | Before | After | Impact |
+|---|---|---|---|
+| Validation set size | 16 images | 878 images | **+54× increase** |
+| Class weight handling | None | 1.850 / 0.685 | Minority class emphasis |
+| Augmentation | None | 5 transforms | +1–2% accuracy |
+| Preprocessing pipeline | Raw pixels | 224×224 normalized | Training-ready format |
+| Documentation | None | 3 detailed reports | Full reproducibility |
 
-**Estimated Accuracy Improvements:**
-- Balanced split: +0.5%
-- Class weights: +1.0% to +1.5%
-- Data augmentation: +1.0% to +2.0%
-- **Total contribution: +2.5% to +4.0%**
+**Estimated accuracy contribution from data engineering alone: +2.5% to +4.0%**
 
 ---
 
 ## 🤖 Model Training
 
-**By Labani Nabila Nour El Houda** |
+**Lead: Labani Nabila Nour El Houda**
 
 ### Methodology
 ```
 Preprocessed Data (from Data Engineer)
        ↓
-Transfer Learning (ImageNet weights)
+Transfer Learning (ImageNet pretrained weights)
        ↓
-Fine-tuning with Class Weights
+Fine-tuning with Computed Class Weights
        ↓
-Threshold Optimization (ROC Analysis)
+Threshold Optimization via ROC Analysis (0.5 → 0.260)
        ↓
-Evaluation (Sensitivity, Specificity, AUC-ROC)
+Evaluation (Sensitivity, Specificity, AUC-ROC, F1)
        ↓
-Grad-CAM Interpretability
+GradCAM Clinical Interpretability
        ↓
-External Dataset Validation
+External Dataset Validation (488 independent images)
 ```
 
 ### Models Trained
 
 | # | Architecture | Parameters | ImageNet Weights | Training Time |
-|---|-------------|------------|-----------------|---------------|
+|---|---|---|---|---|
 | 1 | VGG16 | 138M | ✅ | 120 min |
 | 2 | ResNet50 | 25M | ✅ | ~60 min |
 | 3 | **DenseNet121** ⭐ | **8M** | ✅ | **58 min** |
@@ -378,18 +399,99 @@ External Dataset Validation
 - **Framework:** TensorFlow 2.19 / Keras 3.x
 - **Optimizer:** Adam
 - **Loss:** Binary Cross-Entropy
-- **Early Stopping:** Yes (patience = 7)
+- **Early Stopping:** Patience = 7 epochs
 - **Batch Size:** 32
-- **Class Weights:** {0: 1.850, 1: 0.685} (from Data Engineer)
+- **Class Weights:** {0: 1.850, 1: 0.685} — provided by Data Engineer
+
+---
+
+## 🖥️ Clinical Application
+
+**Full-Stack Streamlit Application — Team Effort**
+
+The clinical application integrates both AI models into a complete, production-grade decision support system deployable in any clinic with Python — no database server required.
+
+### Dual AI Diagnostic Pathways
+
+| Pathway | Input | Model | Output |
+|---|---|---|---|
+| **Chest X-Ray Diagnosis** | Pediatric chest radiograph (PNG/JPG) | DenseNet121 CNN | PNEUMONIA / NORMAL + GradCAM heatmap + radiological explanation |
+| **Vital Signs Diagnosis** | 12 clinical parameters | Gradient Boosting Classifier | Sick / Not Sick + risk score (0–100) + per-feature medical explanation |
+
+### Key Clinical Features
+
+**Doctor & Patient Management**
+- Mandatory doctor profile gate — all clinical features locked until profile is complete
+- Auto-incrementing patient IDs (starting at 1001)
+- Immutable patient records: CSV + formatted PDF on registration
+- Doctor-namespaced data isolation — architecturally impossible to access another doctor's data
+
+**Vital Signs Diagnostic Module** *(whyvitals.py — medical explanation engine)*
+- 12-parameter clinical form: temperature, SpO₂, cough type, fever severity, shortness of breath, chest pain, fatigue, confusion, crackles, sputum color, age, gender
+- Risk score 0–100 computed from feature importance weights
+- Multi-feature interaction detection (e.g., high fever + purulent sputum → bacterial pneumonia pattern)
+- References: WHO IMCI, IDSA/ATS, BTS, NEJM EPIC study
+- **Top predictive feature: Confusion (64.8% importance)**
+
+**X-Ray Diagnostic Module** *(whyxray.py — radiology explanation dictionary)*
+- DenseNet121 inference with classification threshold at 0.260
+- GradCAM via `TensorFlow GradientTape` on layer `conv5_block16_concat`
+- 3-panel figure: original / heatmap / overlay rendered inline
+- Three outcome states: PNEUMONIA / NORMAL / uncertain (borderline safety pathway)
+- Radiological sign explanations with cited sources (Stanford CheXNet, Radiopaedia, RSNA, AJR)
+
+**Treatment Planning**
+- Home management: dynamic medication list, follow-up notes, emergency warning signs, parent handover plan
+- Hospital management: admission notes, nursing instructions, discharge readiness flags (SpO₂, fever-free 24h, oral feeds, improved X-ray)
+- All plans generate a branded PDF report automatically
+
+**Real-Time Nurse Monitoring**
+- Configurable interval timer (seconds / minutes / hours)
+- 15 WHO-aligned monitoring parameters per interval + custom doctor-defined columns
+- Each interval saved as `Check Table N.csv` — append-only, forensically sound
+
+### System Architecture (Three-Tier)
+
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                   TIER 1 — PRESENTATION LAYER                   ║
+║  app.py · profile.py · Add_Patient.py · vitaldiagnostique.py   ║
+║  xraydiagnostique.py · Treatment.py · Hospitaltreatment.py     ║
+╚══════════════════════════════╦═══════════════════════════════════╝
+                               ║ function calls only
+╔══════════════════════════════╩═══════════════════════════════════╗
+║                TIER 2 — BUSINESS LOGIC & AI LAYER               ║
+║  profile_db.py  ·  patient_db.py  ·  vitaldiagnostique_db.py   ║
+║  xraydiagnostique_db.py  ·  treatment_db.py                    ║
+║  whyvitals.py (explanation engine)  ·  whyxray.py              ║
+║  Gradient_Boost.pkl  ·  densenet121_best_model.keras            ║
+╚══════════════════════════════╦═══════════════════════════════════╝
+                               ║ pathlib.Path file I/O
+╔══════════════════════════════╩═══════════════════════════════════╗
+║                  TIER 3 — PERSISTENCE LAYER                     ║
+║  data/<Region-Hospital>/<DoctorName>/<PatientID_Name>/          ║
+║  doctor_profile.csv  ·  N-vitaldiagnostic.csv                   ║
+║  home_treatment.csv  ·  hospitalizedtreatment.csv               ║
+║  Check Table N.csv   ·  xray/*.png  ·  *_pdf/ folders           ║
+╚══════════════════════════════════════════════════════════════════╝
+```
+
+### Data Integrity Mechanisms
+- **Session gating:** All operations verify active doctor session before any file I/O
+- **Append-only diagnostics:** Sequential `N-vitaldiagnostic.csv` naming — immutable history
+- **Two-step save workflow:** AI results displayed for doctor review before any file is written
+- **Path sanitization:** All folder names sanitized; no OS-reserved characters
+- **UTF-8 enforcement:** Correct handling of Arabic-French patient names
+- **Zero-infrastructure:** Runs on any machine with Python — no network, no database server
 
 ---
 
 ## 📊 Results
 
-### 🥇 DenseNet121 — Winner ⭐
+### 🥇 DenseNet121 — Best Model ⭐
 
-| Metric | Default (0.5) | **Optimized (0.260)** | Target |
-|--------|--------------|----------------------|--------|
+| Metric | Default Threshold (0.5) | **Optimized Threshold (0.260)** | Clinical Target |
+|---|---|---|---|
 | **Accuracy** | 92.04% | **94.31%** | ≥90% ✅ |
 | **Sensitivity** | 90.02% | **95.01%** | ≥95% ✅ |
 | **Specificity** | 97.48% | **92.44%** | ≥85% ✅ |
@@ -400,113 +502,109 @@ External Dataset Validation
 
 **Confusion Matrix (Optimized Threshold = 0.260):**
 ```
-                Predicted NORMAL    Predicted PNEUMONIA
-Actual NORMAL        220 (TN)              18 (FP)
-Actual PNEUMONIA      32 (FN)             609 (TP)
+                    Predicted NORMAL    Predicted PNEUMONIA
+Actual NORMAL            220 (TN)              18 (FP)
+Actual PNEUMONIA          32 (FN)             609 (TP)
 ```
-> ✅ **Clinical Impact:** Missed pneumonia cases reduced by **50%** (64 → 32) after threshold optimization
+> ✅ **Clinical Impact:** Missed pneumonia cases reduced by **50%** (64 → 32) after threshold optimization by the ML Engineer.
 
 ---
 
 ### 🥈 VGG16
 
 | Metric | Default (0.5) | Optimized (0.110) | Target |
-|--------|--------------|-------------------|--------|
+|---|---|---|---|
 | Accuracy | 76.11% | 91.35% | ≥90% ✅ |
-| Sensitivity | 67.39% | **95.32%** | ≥95% ✅ |
+| Sensitivity | 67.39% | 95.32% | ≥95% ✅ |
 | Specificity | 99.58% | 80.67% | ≥85% ⚠️ |
 | AUC-ROC | 0.9644 | — | — |
-| Training Time | — | 120 min | — |
 
-> ⚠️ Required extremely aggressive threshold (0.110) to reach target sensitivity
+> ⚠️ Required an extreme threshold (0.110) to reach sensitivity target. Specificity remains below clinical threshold.
 
 ---
 
 ### 🥉 ResNet50
 
 | Metric | Default (0.5) | Optimized | Target |
-|--------|--------------|-----------|--------|
+|---|---|---|---|
 | Accuracy | 82.14% | 78.16% | ≥90% ❌ |
-| Sensitivity | 84.87% | **95.48%** | ≥95% ✅ |
+| Sensitivity | 84.87% | 95.48% | ≥95% ✅ |
 | Specificity | — | 31.51% | ≥85% ❌ |
 | AUC-ROC | 0.8802 | — | — |
 
-> ❌ **Clinically Unacceptable:** 31.51% specificity means 69% of healthy children wrongly flagged
+> ❌ **Clinically unacceptable:** 31.51% specificity means 69% of healthy children are incorrectly flagged as pneumonia cases.
 
 ---
 
 ## 🏆 Model Comparison
 
-| Model | Accuracy | Sensitivity | Specificity | AUC-ROC | Time | Clinical Target |
-|-------|----------|-------------|-------------|---------|------|----------------|
-| **DenseNet121** ⭐ | **94.31%** | **95.01%** | **92.44%** | **0.981** | **58 min** | ✅ **ALL MET** |
-| VGG16 | 91.35% | 95.32% | 80.67% | 0.964 | 120 min | ⚠️ PARTIAL |
-| ResNet50 | 78.16% | 95.48% | 31.51% | 0.880 | ~60 min | ❌ FAILS |
+| Model | Accuracy | Sensitivity | Specificity | AUC-ROC | Time | Clinical Verdict |
+|---|---|---|---|---|---|---|
+| **DenseNet121** ⭐ | **94.31%** | **95.01%** | **92.44%** | **0.981** | **58 min** | ✅ **ALL TARGETS MET** |
+| VGG16 | 91.35% | 95.32% | 80.67% | 0.964 | 120 min | ⚠️ Partial |
+| ResNet50 | 78.16% | 95.48% | 31.51% | 0.880 | ~60 min | ❌ Not suitable |
 
-### 🎯 Why DenseNet121 Won
+### Why DenseNet121 Won
 
-**Technical Advantages:**
-- ✅ **Dense Connections:** Better feature reuse and gradient flow
-- ✅ **Parameter Efficiency:** Only 8M params (vs 138M in VGG16) → less overfitting
-- ✅ **Medical Imaging Proven:** CheXNet (Stanford, 2017) validated DenseNet121 for chest X-rays
-
-**Clinical Performance:**
-- ✅ **Only model meeting ALL targets** simultaneously
-- ✅ **Fastest training** (58 min vs 120 min for VGG16)
-- ✅ **Best generalization** (97.21% sensitivity on external data)
-- ✅ **Highest AUC-ROC** (0.981)
-- ✅ **Balanced performance** (no extreme threshold needed)
+- ✅ **Only model meeting ALL clinical targets simultaneously**
+- ✅ **Dense connections** — superior feature reuse, better gradient flow
+- ✅ **Parameter efficiency** — 8M vs. 138M (VGG16) → less overfitting risk
+- ✅ **Clinically validated architecture** — Stanford CheXNet (2017) used DenseNet121 for chest X-rays
+- ✅ **Fastest training** — 58 min vs. 120 min for VGG16
+- ✅ **Best AUC-ROC** — 0.981
+- ✅ **Balanced performance** — no extreme threshold manipulation needed
 
 ---
 
 ## 🌍 External Validation
 
-DenseNet121 tested on **completely independent dataset** from different source:
+DenseNet121 tested on a **completely independent dataset** from a different source (488 images, never seen during training or validation):
 
 | Metric | Internal Test Set | External Dataset | Difference |
-|--------|------------------|-----------------|------------|
-| **Accuracy** | 94.31% | **87.09%** | -7.22% |
-| **Sensitivity** | 95.01% | **97.21%** | +2.20% ✅ |
+|---|---|---|---|
+| **Accuracy** | 94.31% | 87.09% | -7.22% |
+| **Sensitivity** | 95.01% | **97.21%** | **+2.20%** ✅ |
 | **Specificity** | 92.44% | 76.37% | -16.07% |
-| **Total Samples** | 879 | 488 | — |
+| Total Samples | 879 | 488 | — |
 
-> 🎯 **Key Finding:** Sensitivity **improved** on external data (97.21% vs 95.01%), proving strong real-world generalization. Accuracy drop to 87% is expected — results above 80% indicate strong generalization in medical AI.
+> 🎯 **Key Finding:** Sensitivity **improved** on the external dataset (97.21% vs. 95.01%), confirming the model generalizes to real-world, unseen clinical data. Accuracy above 80% on a fully independent dataset is considered strong generalization in medical AI literature.
 
 ---
 
 ## 🔥 Grad-CAM Visualizations
 
-Grad-CAM provides **clinical interpretability** by showing which lung regions influenced the AI decision:
+Grad-CAM highlights which lung regions influenced each AI decision, enabling clinical verification and building radiologist trust in the system:
 
 <div align="center">
 
-### ⚠️ PNEUMONIA Case - Correctly Detected
+### ⚠️ PNEUMONIA Case — Correctly Detected
 ![Pneumonia Detection](model_training/results/gradcam_visualizations/gradcam_1_PNEUMONIA.png)
 
 **Model Decision:** PNEUMONIA (Confidence: 99.3%)  
-**Grad-CAM Analysis:** Highlights consolidation in right lower lobe  
-**Clinical Correlation:** ✅ Correct diagnosis
+**Grad-CAM:** Highlights consolidation in right lower lobe  
+**Clinical Correlation:** ✅ Correct — matches radiological findings
 
 ---
 
-### ✅ NORMAL Case - Correctly Classified
+### ✅ NORMAL Case — Correctly Classified
 ![Normal Classification](model_training/results/gradcam_visualizations/gradcam_4_NORMAL.png)
 
 **Model Decision:** NORMAL (Confidence: 98.8%)  
-**Grad-CAM Analysis:** Focuses on central mediastinal structures  
-**Clinical Correlation:** ✅ Correct diagnosis
+**Grad-CAM:** Focuses on central mediastinal structures  
+**Clinical Correlation:** ✅ Correct — no pathological features highlighted
 
 </div>
 
-> 🩺 **Clinical Validation:** Heatmaps confirm model learned clinically relevant features — consolidation/infiltrates for pneumonia, normal anatomical landmarks for healthy cases.
+> 🩺 **Clinical Validation:** Heatmaps confirm the model learned clinically meaningful features — consolidation/infiltrates for pneumonia cases, normal anatomical landmarks for healthy cases — rather than dataset artifacts.
 
 ---
 
 ## 📁 Repository Structure
+
 ```
 pediatric-pneumonia-detection/
 │
-├── 🔧 data_engineering/              # Data Engineer work (Days 1-6)
+├── 🔧 data_engineering/               # Bouhmidi Amina Meroua — Phases 1–3
 │   ├── notebooks/
 │   │   ├── 01_Data_Exploration_EDA.ipynb
 │   │   ├── 02_Data_Preprocessing.ipynb
@@ -516,9 +614,9 @@ pediatric-pneumonia-detection/
 │   │   ├── DATA_PREPROCESSING_REPORT.md
 │   │   └── DATA_LOADERS_REPORT.md
 │   └── src/
-│       └── data_loader.py
+│       └── data_loader.py             # Reusable TF data loader package
 │
-├── 🤖 model_training/                # ML Engineer work (Days 7-12)
+├── 🤖 model_training/                 # Labani Nabila Nour El Houda — Phases 4–7
 │   ├── notebooks/
 │   │   ├── 01_DenseNet121_Training.ipynb
 │   │   ├── 01_DenseNet121_GradCAM_and_Threshold.ipynb
@@ -537,17 +635,39 @@ pediatric-pneumonia-detection/
 │   │   ├── External_Validation/
 │   │   └── gradcam_visualizations/
 │   └── saved_models/
-│       ├── densenet121_best_model.keras (34.3 MB)
-│       ├── resnet50_best_model.keras (102.6 MB)
-│       └── vgg16_best_model.keras (57.7 MB)
+│       ├── densenet121_best_model.keras   (34.3 MB) ⭐
+│       ├── resnet50_best_model.keras      (102.6 MB)
+│       └── vgg16_best_model.keras         (57.7 MB)
 │
-├── 📊 data/                          # Datasets (not included)
+├── 🖥️ app/                            # Full-Stack Clinical Application — Team
+│   ├── app.py                         # Entry point, session gate, navigation hub
+│   ├── profile_db.py                  # Auth boundary & session management
+│   ├── patient_db.py                  # Patient CRUD: CSV + PDF + folder scaffolding
+│   ├── vitaldiagnostique_db.py        # Vital sign diagnostic persistence
+│   ├── xraydiagnostique_db.py         # X-ray image storage
+│   ├── treatment_db.py                # Treatment CSV + PDF generation
+│   ├── whyvitals.py                   # Medical explanation engine (standalone library)
+│   ├── whyxray.py                     # Radiology explanation dictionary
+│   └── pages/
+│       ├── Add_Patient.py             # Patient registration form
+│       ├── vitaldiagnostique.py       # Vital signs form + GBM inference
+│       ├── xraydiagnostique.py        # X-ray upload + DenseNet121 + GradCAM
+│       ├── Treatment.py               # Treatment mode selector
+│       ├── Hospitaltreatment.py       # Hospital admission + nurse monitoring
+│       ├── profile.py                 # Doctor profile management
+│       └── About_Us.py                # Team information
+│
+├── 🤖 models/
+│   ├── densenet121_best_model.keras   # Fine-tuned CNN (97.21% external sensitivity)
+│   └── Gradient_Boost.pkl            # GBM classifier (confusion: 64.8% importance)
+│
+├── 📊 data/                           # Datasets (not included — see Quick Start)
 │   └── README.md
 │
 ├── 📁 docs/
-│   ├── images/                       # All visualizations
-│   │   ├── 01-09_*.png              # Data engineering figures
-│   │   └── xray-heart.gif           # Banner
+│   ├── images/                        # All visualizations
+│   │   ├── 01-09_*.png               # Data engineering & training figures
+│   │   └── xray-heart.gif            # Banner
 │   ├── Multimodal_Pneumonia_Complete_Report.pdf
 │   ├── TOPIC_PROPOSAL_2.pdf
 │   └── Pneumonia_Detection_Guide_v4-4.pdf
@@ -556,12 +676,7 @@ pediatric-pneumonia-detection/
 │   ├── preprocessing_config.json
 │   └── data_loaders_summary.json
 │
-├── 📄 reports/
-│   ├── DATA_EXPLORATION_REPORT.md
-│   ├── DATA_PREPROCESSING_REPORT.md
-│   └── DATA_LOADERS_REPORT.md
-│
-├── 📖 README.md                      # This file
+├── 📖 README.md
 ├── 📦 requirements.txt
 └── 📄 LICENSE
 ```
@@ -571,30 +686,35 @@ pediatric-pneumonia-detection/
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 ```bash
-pip install tensorflow>=2.10 keras numpy matplotlib scikit-learn seaborn opencv-python
+pip install tensorflow>=2.10 keras numpy matplotlib scikit-learn seaborn opencv-python \
+            streamlit pillow reportlab joblib
 ```
 
-### 1. Clone the repository
+### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/AminaMar/pediatric-pneumonia-detection.git
 cd pediatric-pneumonia-detection
 ```
 
-### 2. Download the dataset
+### 2. Download the Dataset
+
 - [Kaggle Chest X-Ray Pneumonia Dataset](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
 - Place in: `data/chest_xray/`
 
-### 3. Data Engineering (Optional - already done)
+### 3. Run the Data Engineering Pipeline (Optional — already completed)
 
-Run notebooks in order:
-
-1. [01_Data_Exploration_EDA (1).ipynb](data_engineering/notebooks/01_Data_Exploration_EDA%20(1).ipynb)
-2. [02_Data_Preprocessing.ipynb](data_engineering/notebooks/02_Data_Preprocessing.ipynb)
-3. [03_Data_Loaders.ipynb](data_engineering/notebooks/03_Data_Loaders.ipynb)
+```bash
+# Run notebooks in order:
+data_engineering/notebooks/01_Data_Exploration_EDA.ipynb
+data_engineering/notebooks/02_Data_Preprocessing.ipynb
+data_engineering/notebooks/03_Data_Loaders.ipynb
 ```
 
-### 4. Model Training
+### 4. Train Models (Optional — pre-trained models available)
+
 ```python
 # Open in Google Colab (T4 GPU recommended)
 model_training/notebooks/01_DenseNet121_Training.ipynb
@@ -603,28 +723,38 @@ model_training/notebooks/05_GradCAM.ipynb
 ```
 
 ### 5. Load Pre-trained Model
+
 ```python
 import tensorflow as tf
 
-# Download from: https://drive.google.com/drive/folders/1JtnqNL4lMSRHBtR_eex96k64wSix97Y9
-model = tf.keras.models.load_model('densenet121_best_model.keras')
+# Download from Google Drive (link below)
+model = tf.keras.models.load_model('models/densenet121_best_model.keras')
 
-# Predict on new X-ray
+# Predict on a new X-ray
 prediction = model.predict(preprocessed_image)
+# Output > 0.260 → PNEUMONIA; output ≤ 0.260 → NORMAL
 ```
+
+### 6. Launch the Clinical Application
+
+```bash
+streamlit run app/app.py
+```
+
+The app opens at `http://localhost:8501`. On first launch, complete your **Doctor Profile** to unlock all clinical features.
 
 ---
 
 ## 📖 Documentation
 
-| Document | Author |
-|----------|--------|
-| [Data Exploration Report](data_engineering/reports/DATA_EXPLORATION_REPORT.md)  | Data Engineer |
-| [Data Preprocessing Report](data_engineering/reports/DATA_PREPROCESSING_REPORT.md)  | Data Engineer |
-| [Data Loaders Report](data_engineering/reports/DATA_LOADERS_REPORT.md) | Data Engineer |
-| [Complete Project Report](docs/Multimodal_Pneumonia_Complete_Report.pdf) | Team |
-| [Technical Guide](docs/Pneumonia_Detection_Guide_v4-4.pdf) |  ML Engineer |
-| [Topic Proposal](docs/TOPIC_PROPOSAL_2.pdf) | Team |
+| Document | Description | Author |
+|---|---|---|
+| [Data Exploration Report](data_engineering/reports/DATA_EXPLORATION_REPORT.md) | EDA findings, class imbalance, quality issues | Bouhmidi Amina Meroua |
+| [Data Preprocessing Report](data_engineering/reports/DATA_PREPROCESSING_REPORT.md) | Split strategy, class weights, augmentation pipeline | Bouhmidi Amina Meroua |
+| [Data Loaders Report](data_engineering/reports/DATA_LOADERS_REPORT.md) | TensorFlow generators, batch performance | Bouhmidi Amina Meroua |
+| [Complete Project Report](docs/Multimodal_Pneumonia_Complete_Report.pdf) | Full academic report — all phases | Team |
+| [Technical Guide](docs/Pneumonia_Detection_Guide_v4-4.pdf) | Model architecture & training details | Labani Nabila Nour El Houda |
+| [Topic Proposal](docs/TOPIC_PROPOSAL_2.pdf) | Original project proposal | Team |
 
 ---
 
@@ -634,11 +764,11 @@ Model files exceed GitHub's 25MB limit and are hosted on **Google Drive**.
 
 👉 [**Download All Models (Google Drive)**](https://drive.google.com/drive/folders/1JtnqNL4lMSRHBtR_eex96k64wSix97Y9?usp=sharing)
 
-| Model | Accuracy | Sensitivity | Size | Recommended |
-|-------|----------|-------------|------|-------------|
-| **densenet121_best_model.keras** | **94.31%** | **95.01%** | 34.3 MB | ⭐ **YES** |
-| vgg16_best_model.keras | 91.35% | 95.32% | 57.7 MB | ⚠️ Acceptable |
-| resnet50_best_model.keras | 78.16% | 95.48% | 102.6 MB | ❌ Not recommended |
+| Model | Accuracy | Sensitivity | AUC-ROC | Size | Use |
+|---|---|---|---|---|---|
+| **densenet121_best_model.keras** | **94.31%** | **95.01%** | **0.981** | 34.3 MB | ⭐ **Recommended** |
+| vgg16_best_model.keras | 91.35% | 95.32% | 0.964 | 57.7 MB | ⚠️ Acceptable |
+| resnet50_best_model.keras | 78.16% | 95.48% | 0.880 | 102.6 MB | ❌ Not recommended |
 
 ---
 
@@ -646,73 +776,82 @@ Model files exceed GitHub's 25MB limit and are hosted on **Google Drive**.
 
 **Course:** AI in Healthcare  
 **Institution:** University of Saida, Algeria  
-**Academic Supervisor:** Dr. Abderrahmane Khiat  
+**Academic Year:** 2025–2026  
+**Supervisor:** Dr. Abderrahmane Khiat  
+**Medical Advisor:** Dr. Aimer Mohammed Djamel Eddine (CHU Saida)
 
-### Team Contributions
+### Team Contribution Summary
 
-| Team Member | Contribution | Work Output |
-|-------------|-------------|-------------|
-| **Kassouar Fatima** | Project management | Coordination, planning, delivery |
-| **Bouhmidi Amina Meroua** | Data engineering  | 3 reports, analyse, data loaders |
-| **Labani Nabila Nour El Houda** | Model training  | 3 models, evaluation, Grad-CAM |
-| **Miloudi Maroua Amira** | Business model | Clinical integration strategy |
+| Member | Domain | Key Deliverables |
+|---|---|---|
+| **Bouhmidi Amina Meroua** | Data Engineering | 3 engineering reports, EDA, 70/15/15 split, class weights (1.850/0.685), augmentation pipeline, TF data loaders |
+| **Labani Nabila Nour El Houda** | Deep Learning | 3 trained models, threshold optimization (0.260), GradCAM, external validation (97.21% sensitivity) |
+| Miloudi Maroua Amira | Fullstack & Business | Complete Streamlit app architecture, UI/UX, EMR integration strategy |
+| Kassouar Fatima | ML & Vital Signs | Gradient Boosting classifier, whyvitals.py medical explanation engine |
 
 ---
 
 ## 📚 References
 
-1. **CheXNet: Radiologist-Level Pneumonia Detection on Chest X-Rays** — *Stanford AI Lab, 2017*
-2. **Detection of pneumonia in children through chest radiographs using AI in low-resource settings** — *PLOS Digital Health, 2025*
-3. **AI–EHR integration improving diagnostic capabilities through HL7/FHIR standards** — *PMC/PubMed Central, 2024*
-4. **Diagnostic Performance of a Deep Learning Model Deployed at a National COVID-19 Screening Facility** — *Healthcare MDPI, 2022*
-5. **Pneumonia in Children — Fact Sheet** — *WHO, 2024*
+1. **CheXNet: Radiologist-Level Pneumonia Detection on Chest X-Rays with Deep Learning** — *Stanford AI Lab (Rajpurkar et al., 2017)*
+2. **Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization** — *Selvaraju et al., 2017*
+3. **Detection of Pneumonia in Children Through Chest Radiographs Using AI in Low-Resource Settings** — *PLOS Digital Health, 2025*
+4. **AI–EHR Integration Improving Diagnostic Capabilities Through HL7/FHIR Standards** — *PMC/PubMed Central, 2024*
+5. **WHO IMCI: Integrated Management of Childhood Illness Guidelines** — *World Health Organization*
+6. **IDSA/ATS Consensus Guidelines on Community-Acquired Pneumonia** — *Infectious Diseases Society of America*
+7. **BTS Guidelines for the Management of Community Acquired Pneumonia in Children** — *British Thoracic Society*
+8. **Pneumonia in Children — Fact Sheet** — *WHO, 2024*
 
 ---
 
-## 📊 Key Achievements
+## 📊 Key Achievements Summary
 
-✅ **Clinical Targets Met:**
+✅ **Clinical Targets Met (DenseNet121):**
 - Accuracy: 94.31% (target: ≥90%)
-- Sensitivity: 95.01% (target: ≥95%)
+- Sensitivity: 95.01% (target: ≥95%) — improved to **97.21%** on external data
 - Specificity: 92.44% (target: ≥85%)
 
-✅ **External Validation:**
-- 97.21% sensitivity maintained on independent dataset
-- Proves real-world generalization
+✅ **Data Engineering Impact:**
+- Validation set increased **54×** (16 → 878 images)
+- Scientifically computed class weights via sklearn
+- Anatomically-constrained augmentation pipeline
 
-✅ **Complete Pipeline:**
-- Data engineering → Model training → Evaluation → Interpretability
-- End-to-end reproducible system
+✅ **Complete End-to-End System:**
+- Raw data → engineering → model training → interpretability → clinical application
+- Full Streamlit app with dual AI pathways (X-ray + vital signs)
+- Zero-infrastructure deployment — runs anywhere Python runs
 
 ✅ **Documentation:**
 - 3 detailed data engineering reports
 - Complete notebooks for all phases
-- Comprehensive final report
+- Comprehensive academic final report
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+
+*Developed as an academic capstone at the University of Saida, Algeria, Academic Year 2025–2026.*
 
 ---
 
 ## 📧 Contact
 
-**Project Repository:** [github.com/AminaMar/pediatric-pneumonia-detection](https://github.com/AminaMar/pediatric-pneumonia-detection)
+**Data Engineer & Repository Lead:** Bouhmidi Amina Meroua — [GitHub @AminaMar](https://github.com/AminaMar)  
+**Deep Learning Engineer:** Labani Nabila Nour El Houda — [GitHub @labaninabila193-code](https://github.com/labaninabila193-code)
 
-**Data Engineer:** Bouhmidi Amina Meroua - [GitHub](https://github.com/AminaMar)  
-**ML Engineer:** Labani Nabila Nour El Houda - [GitHub](https://github.com/labaninabila193-code)
+**Project Repository:** [github.com/AminaMar/pediatric-pneumonia-detection](https://github.com/AminaMar/pediatric-pneumonia-detection)
 
 ---
 
 <div align="center">
 
-**University of Saida, Algeria — 2026**
+**University of Saida, Algeria — 2025–2026**
 
-*This project addresses a critical healthcare challenge through state-of-the-art AI,*  
-*aligned with Algeria's Digital Health Strategy (2021–2022)*
+*This project addresses a critical healthcare challenge in Algeria through state-of-the-art AI,*  
+*aligned with the National Digital Health Strategy.*
 
-
+*Complete pipeline: Data Engineering · Deep Learning · Clinical Application*
 
 </div>
