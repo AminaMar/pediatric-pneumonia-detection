@@ -778,8 +778,8 @@ Model files exceed GitHub's 25MB limit and are hosted on **Google Drive**.
 
 | Member | Key Deliverables |
 |---|---|
-| **Bouhmidi Amina Meroua** ⭐ | EDA, 70/15/15 stratified split, scientifically computed class weights (1.850/0.685), anatomically-constrained augmentation, optimized TF data loaders, repository lead |
-| **Labani Nabila Nour El Houda** ⭐ | 3 trained CNN models (VGG16/ResNet50/DenseNet121), ROC threshold optimization (0.260), GradCAM clinical heatmaps, external validation (**97.21% sensitivity**) |
+| **Bouhmidi Amina Meroua**  | EDA, 70/15/15 stratified split, scientifically computed class weights (1.850/0.685), anatomically-constrained augmentation, optimized TF data loaders, repository lead |
+| **Labani Nabila Nour El Houda**  | 3 trained CNN models (VGG16/ResNet50/DenseNet121), ROC threshold optimization (0.260), GradCAM clinical heatmaps, external validation (**97.21% sensitivity**) |
 | Miloudi Maroua Amira | Complete Streamlit clinical application, UI/UX design, EMR integration strategy |
 | Kassouar Fatima | Gradient Boosting vital signs classifier, whyvitals.py medical explanation engine |
 | Dr. Abderrahmane Khiat | Academic supervision |
