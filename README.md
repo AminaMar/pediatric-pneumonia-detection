@@ -815,12 +815,11 @@ The app opens at `http://localhost:8501`. On first launch, complete your **Docto
 
 ## 📖 Documentation
 
-| Document | Description | Author |
-|---|---|---|
-| [Data Exploration Report](data_engineering/reports/DATA_EXPLORATION_REPORT.md) | EDA findings, class imbalance, quality issues | Bouhmidi Amina Meroua |
-| [Data Preprocessing Report](docs/Preprocessing_Report_Final.pdf) | Split strategy, class weights, augmentation pipeline | Bouhmidi Amina Meroua |
-| [Model Training & Evaluation Report](docs/Phase2_Final%20(Repaired).pdf) | Model architecture, training details, threshold optimization, GradCAM | Labani Nabila Nour El Houda |
-| [Topic Proposal](docs/TOPIC_PROPOSAL_2.pdf) | Original project proposal | Full Team |
+| Document | Description |
+|---|---|
+| [Data Preprocessing Report](docs/Preprocessing_Report_Final.pdf) | Split strategy, class weights, augmentation pipeline |
+| [Model Training & Evaluation Report](docs/Phase2_Final%20(Repaired).pdf) | Model architecture, training details, threshold optimization, GradCAM |
+| [Topic Proposal](docs/TOPIC_PROPOSAL_2.pdf) | Original project proposal |
 
 ---
 
