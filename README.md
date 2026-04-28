@@ -48,7 +48,7 @@
 
 This project delivers a **complete, end-to-end AI-powered clinical decision support system** for pediatric pneumonia detection, from raw data engineering through to a fully deployed Streamlit application used by clinicians in real time.
 
-The pipeline spans three major pillars:
+The pipeline spans four major pillars:
 
 **Pillar 1 — Data Engineering** *(Bouhmidi Amina Meroua)*
 - Complete EDA on 5,863 pediatric chest X-rays
@@ -62,11 +62,18 @@ The pipeline spans three major pillars:
 - GradCAM clinical interpretability implementation
 - External cross-dataset validation achieving **97.21% sensitivity**
 
-**Pillar 3 — Full-Stack Clinical Application** *(Team)*
+**Pillar 3 — Full-Stack Clinical Application & Business Model** *(Miloudi Maroua Amira)*
 - Streamlit-based clinical decision support application
 - Dual AI diagnostic pathways: DenseNet121 (X-ray) + Gradient Boosting (vital signs)
 - Complete doctor/patient management with zero-infrastructure file-based persistence
 - Real-time nurse monitoring, treatment planning, and PDF report generation
+- Business model design and deployment strategy
+
+**Pillar 4 — ML Pipeline & Project Management** *(Kassouar Fatima)*
+- Gradient Boosting classifier for vital signs-based diagnosis
+- CSV preprocessing pipeline and data management
+- Medical explanation engine (`whyvitals.py`)
+- Project coordination and team management
 
 > **Key Achievement:** DenseNet121 achieved **95.01% Sensitivity** and **94.31% Accuracy** on the internal test set, improving to **97.21% Sensitivity** on external validation. The full clinical application integrates both the deep learning model and a Gradient Boosting vital signs classifier into a production-grade Streamlit interface.
 
@@ -81,9 +88,9 @@ The pipeline spans three major pillars:
     <td align="center"><b>Core Responsibilities</b></td>
   </tr>
   <tr>
-    <td>🔧 <b>Data Engineer & Repository Lead</b></td>
+    <td>🔧 <b>Data Engineer</b></td>
     <td><b>Bouhmidi Amina Meroua</b></td>
-    <td>Complete data pipeline (EDA → preprocessing → data loaders), 70/15/15 stratified split, class weight computation, augmentation design, 3 detailed engineering reports, repository architecture</td>
+    <td>Complete data pipeline (EDA → preprocessing → data loaders), 70/15/15 stratified split, class weight computation, augmentation design</td>
   </tr>
   <tr>
     <td>🤖 <b>Deep Learning Engineer</b></td>
@@ -91,14 +98,14 @@ The pipeline spans three major pillars:
     <td>DenseNet121 / VGG16 / ResNet50 training, threshold optimization (0.260), GradCAM implementation, external dataset validation (97.21% sensitivity), X-ray diagnostic module in app</td>
   </tr>
   <tr>
-    <td>💻 Fullstack Developer & Business Model</td>
-    <td>Miloudi Maroua Amira</td>
-    <td>Full Streamlit application development (architecture, UI/UX, all pages), clinical workflow integration, business model & deployment strategy</td>
+    <td>💻 <b>Developer & Business Model</b></td>
+    <td><b>Miloudi Maroua Amira</b></td>
+    <td>Full Streamlit application development (architecture, UI/UX, all pages), clinical workflow integration, business model design & deployment strategy</td>
   </tr>
   <tr>
-    <td>🩺 ML Engineer</td>
-    <td>Kassouar Fatima</td>
-    <td>Gradient Boosting classifier (vital signs), CSV preprocessing pipeline, medical explanation engine (whyvitals.py)</td>
+    <td>📋 <b>Manager</b></td>
+    <td><b>Kassouar Fatima</b></td>
+    <td>Gradient Boosting classifier (vital signs), CSV preprocessing pipeline, medical explanation engine (whyvitals.py), project coordination</td>
   </tr>
   <tr>
     <td>👨‍🏫 Academic Supervisor</td>
@@ -204,17 +211,24 @@ A dual-pathway AI system with a full clinical application:
   </tr>
   <tr>
     <td>🖥️ Clinical Streamlit Application</td>
-    <td>Full Team</td>
+    <td>Miloudi Maroua Amira</td>
     <td>✅ Complete</td>
     <td>████████████ 100%</td>
     <td>Doctor onboarding, patient management, dual AI diagnostics, treatment module, nurse monitoring</td>
   </tr>
   <tr>
-    <td>📝 Documentation</td>
-    <td>Bouhmidi Amina Meroua & Labani Nabila</td>
+    <td>🌿 Vital Signs ML Module</td>
+    <td>Kassouar Fatima</td>
     <td>✅ Complete</td>
     <td>████████████ 100%</td>
-    <td>3 engineering reports, complete final report, technical guide</td>
+    <td>Gradient Boosting model, whyvitals.py, CSV preprocessing pipeline</td>
+  </tr>
+  <tr>
+    <td>📝 Reports & Representation</td>
+    <td>Full Team</td>
+    <td>✅ Complete</td>
+    <td>████████████ 100%</td>
+    <td>3 engineering reports, complete final report, technical guide, project presentations</td>
   </tr>
 </table>
 
@@ -462,9 +476,9 @@ A standalone pure-Python medical knowledge base with zero UI dependencies:
 
 ## 🖥️ Clinical Application
 
-**Full-Stack Streamlit Application — Developed by Miloudi Maroua Amira** ([@lily01011](https://github.com/lily01011))
+**Developer & Business Model: Miloudi Maroua Amira** ([@lily01011](https://github.com/lily01011))
 
-The clinical application was built and designed by Miloudi Maroua Amira, integrating the AI models trained by Labani Nabila and the preprocessed data pipeline built by Bouhmidi Amina into a complete, production-grade clinical decision support system deployable in any clinic with Python — no database server required.
+The clinical application was built and designed by Miloudi Maroua Amira, integrating the AI models trained by Labani Nabila and the preprocessed data pipeline built by Bouhmidi Amina into a complete, production-grade clinical decision support system deployable in any clinic with Python — no database server required. The business model and deployment strategy were also designed by Miloudi Maroua Amira.
 
 ### Dual AI Diagnostic Pathways
 
@@ -561,7 +575,7 @@ The clinical application was built and designed by Miloudi Maroua Amira, integra
 Actual NORMAL            220 (TN)              18 (FP)
 Actual PNEUMONIA          32 (FN)             609 (TP)
 ```
-> ✅ **Clinical Impact:** Missed pneumonia cases reduced by **50%** (64 → 32) after threshold optimization by the ML Engineer.
+> ✅ **Clinical Impact:** Missed pneumonia cases reduced by **50%** (64 → 32) after threshold optimization.
 
 ---
 
@@ -694,14 +708,14 @@ pediatric-pneumonia-detection/
 │       ├── resnet50_best_model.keras      (102.6 MB)
 │       └── vgg16_best_model.keras         (57.7 MB)
 │
-├── 🖥️ app/                            # Full-Stack Clinical Application — Team
+├── 🖥️ app/                            # Developer & Business Model — Miloudi Maroua Amira
 │   ├── app.py                         # Entry point, session gate, navigation hub
 │   ├── profile_db.py                  # Auth boundary & session management
 │   ├── patient_db.py                  # Patient CRUD: CSV + PDF + folder scaffolding
 │   ├── vitaldiagnostique_db.py        # Vital sign diagnostic persistence
 │   ├── xraydiagnostique_db.py         # X-ray image storage
 │   ├── treatment_db.py                # Treatment CSV + PDF generation
-│   ├── whyvitals.py                   # Medical explanation engine (standalone library)
+│   ├── whyvitals.py                   # Medical explanation engine (Kassouar Fatima)
 │   ├── whyxray.py                     # Radiology explanation dictionary
 │   └── pages/
 │       ├── Add_Patient.py             # Patient registration form
@@ -714,7 +728,7 @@ pediatric-pneumonia-detection/
 │
 ├── 🤖 models/
 │   ├── densenet121_best_model.keras   # Fine-tuned CNN (97.21% external sensitivity)
-│   └── Gradient_Boost.pkl            # GBM classifier (confusion: 64.8% importance)
+│   └── Gradient_Boost.pkl            # GBM classifier (Kassouar Fatima)
 │
 ├── 📊 data/                           # Datasets (not included — see Quick Start)
 │   └── README.md
@@ -807,9 +821,9 @@ The app opens at `http://localhost:8501`. On first launch, complete your **Docto
 | [Data Exploration Report](data_engineering/reports/DATA_EXPLORATION_REPORT.md) | EDA findings, class imbalance, quality issues | Bouhmidi Amina Meroua |
 | [Data Preprocessing Report](data_engineering/reports/DATA_PREPROCESSING_REPORT.md) | Split strategy, class weights, augmentation pipeline | Bouhmidi Amina Meroua |
 | [Data Loaders Report](data_engineering/reports/DATA_LOADERS_REPORT.md) | TensorFlow generators, batch performance | Bouhmidi Amina Meroua |
-| [Complete Project Report](docs/Multimodal_Pneumonia_Complete_Report.pdf) | Full academic report — all phases | Team |
+| [Complete Project Report](docs/Multimodal_Pneumonia_Complete_Report.pdf) | Full academic report — all phases | Full Team |
 | [Technical Guide](docs/Pneumonia_Detection_Guide_v4-4.pdf) | Model architecture & training details | Labani Nabila Nour El Houda |
-| [Topic Proposal](docs/TOPIC_PROPOSAL_2.pdf) | Original project proposal | Team |
+| [Topic Proposal](docs/TOPIC_PROPOSAL_2.pdf) | Original project proposal | Full Team |
 
 ---
 
@@ -837,13 +851,13 @@ Model files exceed GitHub's 25MB limit and are hosted on **Google Drive**.
 
 ### Team Contribution Summary
 
-| Member | Key Deliverables |
-|---|---|
-| **Bouhmidi Amina Meroua** ⭐ | EDA, 70/15/15 stratified split, scientifically computed class weights (1.850/0.685), anatomically-constrained augmentation, optimized TF data loaders, repository lead |
-| **Labani Nabila Nour El Houda** ⭐ | 3 trained CNN models (VGG16/ResNet50/DenseNet121), ROC threshold optimization (0.260), GradCAM clinical heatmaps, external validation (**97.21% sensitivity**) |
-| Miloudi Maroua Amira | Complete Streamlit clinical application, UI/UX design, EMR integration strategy |
-| Kassouar Fatima | Gradient Boosting vital signs classifier, whyvitals.py medical explanation engine |
-| Dr. Abderrahmane Khiat | Academic supervision |
+| Member | Role | Key Deliverables |
+|---|---|---|
+| **Bouhmidi Amina Meroua** ⭐ | Data Engineer | EDA, 70/15/15 stratified split, scientifically computed class weights (1.850/0.685), anatomically-constrained augmentation, optimized TF data loaders |
+| **Labani Nabila Nour El Houda** ⭐ | Deep Learning Engineer | 3 trained CNN models (VGG16/ResNet50/DenseNet121), ROC threshold optimization (0.260), GradCAM clinical heatmaps, external validation (**97.21% sensitivity**) |
+| **Miloudi Maroua Amira** | Developer & Business Model | Complete Streamlit clinical application, UI/UX design, EMR integration strategy, business model & deployment |
+| **Kassouar Fatima** | Manager | Gradient Boosting vital signs classifier, whyvitals.py medical explanation engine, CSV preprocessing pipeline, project coordination |
+| Dr. Abderrahmane Khiat | Academic Supervisor | Academic supervision & evaluation |
 
 ---
 
@@ -877,10 +891,11 @@ Model files exceed GitHub's 25MB limit and are hosted on **Google Drive**.
 - Full Streamlit app with dual AI pathways (X-ray + vital signs)
 - Zero-infrastructure deployment — runs anywhere Python runs
 
-✅ **Documentation:**
+✅ **Documentation & Representation:**
 - 3 detailed data engineering reports
 - Complete notebooks for all phases
 - Comprehensive academic final report
+- Project presentations and team reports
 
 ---
 
@@ -894,9 +909,9 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 ## 📧 Contact
 
-**Data Engineer & Repository Lead:** Bouhmidi Amina Meroua — [GitHub @AminaMar](https://github.com/AminaMar)  
+**Data Engineer:** Bouhmidi Amina Meroua — [GitHub @AminaMar](https://github.com/AminaMar)  
 **Deep Learning Engineer:** Labani Nabila Nour El Houda — [GitHub @labaninabila193-code](https://github.com/labaninabila193-code)  
-**Fullstack Developer:** Miloudi Maroua Amira — [GitHub @lily01011](https://github.com/lily01011)
+**Developer & Business Model:** Miloudi Maroua Amira — [GitHub @lily01011](https://github.com/lily01011)
 
 **Project Repository:** [github.com/AminaMar/pediatric-pneumonia-detection](https://github.com/AminaMar/pediatric-pneumonia-detection)
 
@@ -909,6 +924,6 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 *This project addresses a critical healthcare challenge in Algeria through state-of-the-art AI,*  
 *aligned with the National Digital Health Strategy.*
 
-*Complete pipeline: Data Engineering · Deep Learning · Clinical Application*
+*Complete pipeline: Data Engineering · Deep Learning · Clinical Application · Project Management*
 
 </div>
