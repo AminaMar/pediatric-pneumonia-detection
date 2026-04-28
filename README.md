@@ -62,18 +62,17 @@ The pipeline spans four major pillars:
 - GradCAM clinical interpretability implementation
 - External cross-dataset validation achieving **97.21% sensitivity**
 
-**Pillar 3 — Full-Stack Clinical Application & Business Model** *(Miloudi Maroua Amira)*
+**Pillar 3 — Clinical Application & Business Model** *(Miloudi Maroua Amira)*
 - Streamlit-based clinical decision support application
 - Dual AI diagnostic pathways: DenseNet121 (X-ray) + Gradient Boosting (vital signs)
 - Complete doctor/patient management with zero-infrastructure file-based persistence
 - Real-time nurse monitoring, treatment planning, and PDF report generation
 - Business model design and deployment strategy
 
-**Pillar 4 — ML Pipeline & Project Management** *(Kassouar Fatima)*
+**Pillar 4 — Vital Signs ML Pipeline** *(Kassouar Fatima)*
 - Gradient Boosting classifier for vital signs-based diagnosis
 - CSV preprocessing pipeline and data management
 - Medical explanation engine (`whyvitals.py`)
-- Project coordination and team management
 
 > **Key Achievement:** DenseNet121 achieved **95.01% Sensitivity** and **94.31% Accuracy** on the internal test set, improving to **97.21% Sensitivity** on external validation. The full clinical application integrates both the deep learning model and a Gradient Boosting vital signs classifier into a production-grade Streamlit interface.
 
@@ -105,7 +104,7 @@ The pipeline spans four major pillars:
   <tr>
     <td>📋 <b>Manager</b></td>
     <td><b>Kassouar Fatima</b></td>
-    <td>Gradient Boosting classifier (vital signs), CSV preprocessing pipeline, medical explanation engine (whyvitals.py), project coordination</td>
+    <td>Gradient Boosting classifier (vital signs), CSV preprocessing pipeline, medical explanation engine (whyvitals.py)</td>
   </tr>
   <tr>
     <td>👨‍🏫 Academic Supervisor</td>
@@ -737,9 +736,9 @@ pediatric-pneumonia-detection/
 │   ├── images/                        # All visualizations
 │   │   ├── 01-09_*.png               # Data engineering & training figures
 │   │   └── xray-heart.gif            # Banner
-│   ├── Multimodal_Pneumonia_Complete_Report.pdf
-│   ├── TOPIC_PROPOSAL_2.pdf
-│   └── Pneumonia_Detection_Guide_v4-4.pdf
+│   ├── Phase2_Final (Repaired).pdf    # Model training & evaluation report
+│   ├── Preprocessing_Report_Final.pdf # Data preprocessing report
+│   └── TOPIC_PROPOSAL_2.pdf          # Original project proposal
 │
 ├── ⚙️ config/
 │   ├── preprocessing_config.json
@@ -819,10 +818,8 @@ The app opens at `http://localhost:8501`. On first launch, complete your **Docto
 | Document | Description | Author |
 |---|---|---|
 | [Data Exploration Report](data_engineering/reports/DATA_EXPLORATION_REPORT.md) | EDA findings, class imbalance, quality issues | Bouhmidi Amina Meroua |
-| [Data Preprocessing Report](data_engineering/reports/DATA_PREPROCESSING_REPORT.md) | Split strategy, class weights, augmentation pipeline | Bouhmidi Amina Meroua |
-| [Data Loaders Report](data_engineering/reports/DATA_LOADERS_REPORT.md) | TensorFlow generators, batch performance | Bouhmidi Amina Meroua |
-| [Complete Project Report](docs/Multimodal_Pneumonia_Complete_Report.pdf) | Full academic report — all phases | Full Team |
-| [Technical Guide](docs/Pneumonia_Detection_Guide_v4-4.pdf) | Model architecture & training details | Labani Nabila Nour El Houda |
+| [Data Preprocessing Report](docs/Preprocessing_Report_Final.pdf) | Split strategy, class weights, augmentation pipeline | Bouhmidi Amina Meroua |
+| [Model Training & Evaluation Report](docs/Phase2_Final%20(Repaired).pdf) | Model architecture, training details, threshold optimization, GradCAM | Labani Nabila Nour El Houda |
 | [Topic Proposal](docs/TOPIC_PROPOSAL_2.pdf) | Original project proposal | Full Team |
 
 ---
@@ -853,10 +850,10 @@ Model files exceed GitHub's 25MB limit and are hosted on **Google Drive**.
 
 | Member | Role | Key Deliverables |
 |---|---|---|
-| **Bouhmidi Amina Meroua** ⭐ | Data Engineer | EDA, 70/15/15 stratified split, scientifically computed class weights (1.850/0.685), anatomically-constrained augmentation, optimized TF data loaders |
-| **Labani Nabila Nour El Houda** ⭐ | Deep Learning Engineer | 3 trained CNN models (VGG16/ResNet50/DenseNet121), ROC threshold optimization (0.260), GradCAM clinical heatmaps, external validation (**97.21% sensitivity**) |
+| **Bouhmidi Amina Meroua** | Data Engineer | EDA, 70/15/15 stratified split, scientifically computed class weights (1.850/0.685), anatomically-constrained augmentation, optimized TF data loaders |
+| **Labani Nabila Nour El Houda** | Deep Learning Engineer | 3 trained CNN models (VGG16/ResNet50/DenseNet121), ROC threshold optimization (0.260), GradCAM clinical heatmaps, model comparison, external validation (**97.21% sensitivity**) |
 | **Miloudi Maroua Amira** | Developer & Business Model | Complete Streamlit clinical application, UI/UX design, EMR integration strategy, business model & deployment |
-| **Kassouar Fatima** | Manager | Gradient Boosting vital signs classifier, whyvitals.py medical explanation engine, CSV preprocessing pipeline, project coordination |
+| **Kassouar Fatima** | Manager | Gradient Boosting vital signs classifier, whyvitals.py medical explanation engine, CSV preprocessing pipeline |
 | Dr. Abderrahmane Khiat | Academic Supervisor | Academic supervision & evaluation |
 
 ---
