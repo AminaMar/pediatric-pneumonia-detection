@@ -70,8 +70,11 @@ The pipeline spans four major pillars:
 - Business model design and deployment strategy
 
 **Pillar 4 — Vital Signs ML Pipeline** *(Kassouar Fatima)*
-- Gradient Boosting classifier for vital signs-based diagnosis
+- Gradient Boosting classifier for vital signs–based diagnosis
 - CSV preprocessing pipeline and data management
+- Binary probability scoring ∈ [0,1] per patient record (12 clinical features)
+- Feature engineering and data cleaning
+
 
 
 > **Key Achievement:** DenseNet121 achieved **95.01% Sensitivity** and **94.31% Accuracy** on the internal test set, improving to **97.21% Sensitivity** on external validation. The full clinical application integrates both the deep learning model and a Gradient Boosting vital signs classifier into a production-grade Streamlit interface.
@@ -161,49 +164,43 @@ A dual-pathway AI system with a full clinical application:
   </tr>
   <tr>
     <td>📊 Data Exploration</td>
-    <td>Bouhmidi Amina Meroua</td>
+    <td rowspan="7">Bouhmidi Amina Meroua<br>Labani Nabila Nour El Houda</td>
     <td>✅ Complete</td>
     <td>████████████ 100%</td>
     <td>EDA Report, Figures 01–04</td>
   </tr>
   <tr>
     <td>🔧 Data Preprocessing</td>
-    <td>Bouhmidi Amina Meroua</td>
     <td>✅ Complete</td>
     <td>████████████ 100%</td>
     <td>Preprocessed Dataset, Figures 05–07, preprocessing_config.json</td>
   </tr>
   <tr>
     <td>📦 Data Loaders</td>
-    <td>Bouhmidi Amina Meroua</td>
     <td>✅ Complete</td>
     <td>████████████ 100%</td>
     <td>TF Generators, data_loader.py, data_loaders_summary.json</td>
   </tr>
   <tr>
     <td>🤖 Model Training (×3)</td>
-    <td>Labani Nabila Nour El Houda</td>
     <td>✅ Complete</td>
     <td>████████████ 100%</td>
     <td>VGG16, ResNet50, DenseNet121 trained models</td>
   </tr>
   <tr>
     <td>📈 Model Evaluation & Optimization</td>
-    <td>Labani Nabila Nour El Houda</td>
     <td>✅ Complete</td>
     <td>████████████ 100%</td>
     <td>ROC analysis, threshold 0.260, full metrics report</td>
   </tr>
   <tr>
     <td>🔥 Grad-CAM Interpretability</td>
-    <td>Labani Nabila Nour El Houda</td>
     <td>✅ Complete</td>
     <td>████████████ 100%</td>
     <td>Clinical heatmaps, GradCAM module</td>
   </tr>
   <tr>
     <td>🌍 External Dataset Validation</td>
-    <td>Labani Nabila Nour El Houda</td>
     <td>✅ Complete</td>
     <td>████████████ 100%</td>
     <td>97.21% sensitivity on independent dataset</td>
@@ -220,7 +217,7 @@ A dual-pathway AI system with a full clinical application:
     <td>Kassouar Fatima</td>
     <td>✅ Complete</td>
     <td>████████████ 100%</td>
-    <td>Gradient Boosting model, whyvitals.py, CSV preprocessing pipeline</td>
+    <td>Gradient Boosting model, CSV preprocessing pipeline, Feature engineering and data cleaning, ML Model tuning and performance evaluation</td>
   </tr>
   <tr>
     <td>📝 Reports & Representation</td>
@@ -230,7 +227,6 @@ A dual-pathway AI system with a full clinical application:
     <td>3 engineering reports, complete final report, technical guide, project presentations</td>
   </tr>
 </table>
-
 ---
 
 ## 📁 Dataset
