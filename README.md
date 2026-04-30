@@ -162,69 +162,85 @@ A dual-pathway AI system with a full clinical application:
     <th>Progress</th>
     <th>Deliverables</th>
   </tr>
+
   <tr>
     <td>📊 Data Exploration</td>
-    <td rowspan="7">Bouhmidi Amina Meroua<br>Labani Nabila Nour El Houda</td>
+    <td>Bouhmidi Amina Meroua / Labani Nabila Nour El Houda</td>
     <td>✅ Complete</td>
-    <td>████████████ 100%</td>
+    <td>100%</td>
     <td>EDA Report, Figures 01–04</td>
   </tr>
+
   <tr>
     <td>🔧 Data Preprocessing</td>
+    <td>Bouhmidi Amina Meroua / Labani Nabila Nour El Houda</td>
     <td>✅ Complete</td>
-    <td>████████████ 100%</td>
-    <td>Preprocessed Dataset, Figures 05–07, preprocessing_config.json</td>
+    <td>100%</td>
+    <td>Preprocessed Dataset, preprocessing_config.json</td>
   </tr>
+
   <tr>
     <td>📦 Data Loaders</td>
+    <td>Bouhmidi Amina Meroua / Labani Nabila Nour El Houda</td>
     <td>✅ Complete</td>
-    <td>████████████ 100%</td>
-    <td>TF Generators, data_loader.py, data_loaders_summary.json</td>
+    <td>100%</td>
+    <td>TF Generators, data_loader.py</td>
   </tr>
+
   <tr>
     <td>🤖 Model Training (×3)</td>
+    <td>Bouhmidi Amina Meroua / Labani Nabila Nour El Houda</td>
     <td>✅ Complete</td>
-    <td>████████████ 100%</td>
-    <td>VGG16, ResNet50, DenseNet121 trained models</td>
+    <td>100%</td>
+    <td>VGG16, ResNet50, DenseNet121</td>
   </tr>
+
   <tr>
     <td>📈 Model Evaluation & Optimization</td>
+    <td>Bouhmidi Amina Meroua / Labani Nabila Nour El Houda</td>
     <td>✅ Complete</td>
-    <td>████████████ 100%</td>
-    <td>ROC analysis, threshold 0.260, full metrics report</td>
+    <td>100%</td>
+    <td>ROC analysis, metrics report</td>
   </tr>
+
   <tr>
     <td>🔥 Grad-CAM Interpretability</td>
+    <td>Bouhmidi Amina Meroua / Labani Nabila Nour El Houda</td>
     <td>✅ Complete</td>
-    <td>████████████ 100%</td>
+    <td>100%</td>
     <td>Clinical heatmaps, GradCAM module</td>
   </tr>
+
   <tr>
     <td>🌍 External Dataset Validation</td>
+    <td>Bouhmidi Amina Meroua / Labani Nabila Nour El Houda</td>
     <td>✅ Complete</td>
-    <td>████████████ 100%</td>
-    <td>97.21% sensitivity on independent dataset</td>
+    <td>100%</td>
+    <td>97.21% sensitivity validation</td>
   </tr>
+
   <tr>
     <td>🖥️ Clinical Streamlit Application</td>
     <td>Miloudi Maroua Amira</td>
     <td>✅ Complete</td>
-    <td>████████████ 100%</td>
-    <td>Doctor onboarding, patient management, dual AI diagnostics, treatment module, nurse monitoring</td>
+    <td>100%</td>
+    <td>Doctor onboarding, patient management, AI diagnostics</td>
   </tr>
+
   <tr>
     <td>🌿 Vital Signs ML Module</td>
     <td>Kassouar Fatima</td>
     <td>✅ Complete</td>
-    <td>████████████ 100%</td>
-    <td>Gradient Boosting model, CSV preprocessing pipeline, Feature engineering and data cleaning, ML Model tuning and performance evaluation</td>
+    <td>100%</td>
+    <td>Gradient Boosting, CSV pipeline, feature engineering</td>
   </tr>
+
   <tr>
     <td>📝 Reports & Representation</td>
     <td>Full Team</td>
     <td>✅ Complete</td>
-    <td>████████████ 100%</td>
-    <td>3 engineering reports, complete final report, technical guide, project presentations</td>
+    <td>100%</td>
+    <td>Final report, technical guide, presentations</td>
   </tr>
 </table>
 ---
