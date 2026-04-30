@@ -852,7 +852,7 @@ Model files exceed GitHub's 25MB limit and are hosted on **Google Drive**.
 | **Bouhmidi Amina Meroua** | Data Engineer | EDA, 70/15/15 stratified split, scientifically computed class weights (1.850/0.685), anatomically-constrained augmentation, optimized TF data loaders |
 | **Labani Nabila Nour El Houda** | Deep Learning Engineer | 3 trained CNN models (VGG16/ResNet50/DenseNet121), ROC threshold optimization (0.260), GradCAM clinical heatmaps, model comparison, external validation (**97.21% sensitivity**) |
 | **Miloudi Maroua Amira** | Developer & Business Model | Complete Streamlit clinical application, UI/UX design, EMR integration strategy, business model & deployment |
-| **Kassouar Fatima** | Manager | Gradient Boosting vital signs classifier, whyvitals.py medical explanation engine, CSV preprocessing pipeline |
+| **Kassouar Fatima** | Manager | Gradient Boosting vital signs classifier, CSV preprocessing pipeline and management |
 | Dr. Abderrahmane Khiat | Academic Supervisor | Academic supervision & evaluation |
 
 ---
@@ -907,7 +907,7 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 **Data Engineer:** Bouhmidi Amina Meroua — [GitHub @AminaMar](https://github.com/AminaMar)  
 **Deep Learning Engineer:** Labani Nabila Nour El Houda — [GitHub @labaninabila193-code](https://github.com/labaninabila193-code)  
-** Application Developer & Business Model:** Miloudi Maroua Amira — [GitHub @lily01011](https://github.com/lily01011)
+**Application Developer & Business Model:** Miloudi Maroua Amira — [GitHub @lily01011](https://github.com/lily01011)
 
 **Project Repository:** [github.com/AminaMar/pediatric-pneumonia-detection](https://github.com/AminaMar/pediatric-pneumonia-detection)
 
