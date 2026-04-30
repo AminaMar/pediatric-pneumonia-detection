@@ -615,12 +615,12 @@ Grad-CAM highlights which lung regions influenced each AI decision, enabling cli
  
 <div align="center">
 ### ⚠️ PNEUMONIA Case — Correctly Detected
-![Pneumonia Detection](model_training/results/gradcam_visualizations/gradcam_1_PNEUMONIA.png)
- 
-**Model Decision:** PNEUMONIA (Confidence: 99.3%) 
-**Grad-CAM:** Highlights consolidation in right lower lobe 
+![Pneumonia Detection](model_training/results/gradcam_visualizations/gradcam_2_PNEUMONIA.png)
+
+**Model Decision:** PNEUMONIA (Confidence: 99.3%)  
+**Grad-CAM:** Highlights consolidation in right lower lobe  
 **Clinical Correlation:** ✅ Correct — matches radiological findings
- 
+
 ---
  
 ### ✅ NORMAL Case — Correctly Classified
