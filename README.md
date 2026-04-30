@@ -163,62 +163,34 @@ A dual-pathway AI system with a full clinical application:
     <th>Deliverables</th>
   </tr>
 
+  <!-- AMINA -->
   <tr>
-    <td>📊 Data Exploration</td>
-    <td>Bouhmidi Amina Meroua / Labani Nabila Nour El Houda</td>
+    <td>📊 Data Pipeline (Exploration, Preprocessing, Loaders)</td>
+    <td>Bouhmidi Amina Meroua</td>
     <td>✅ Complete</td>
     <td>100%</td>
-    <td>EDA Report, Figures 01–04</td>
+    <td>
+      EDA Report, Figures 01–07 <br>
+      Preprocessed Dataset, preprocessing_config.json <br>
+      TF Data Generators, data_loader.py
+    </td>
   </tr>
 
+  <!-- NABILA -->
   <tr>
-    <td>🔧 Data Preprocessing</td>
-    <td>Bouhmidi Amina Meroua / Labani Nabila Nour El Houda</td>
+    <td>🤖 Deep Learning Pipeline (Training, Evaluation, Interpretability, Validation)</td>
+    <td>Labani Nabila Nour El Houda</td>
     <td>✅ Complete</td>
     <td>100%</td>
-    <td>Preprocessed Dataset, preprocessing_config.json</td>
+    <td>
+      VGG16, ResNet50, DenseNet121 <br>
+      ROC Analysis, Metrics Report <br>
+      Grad-CAM Heatmaps <br>
+      External Validation (97.21% sensitivity)
+    </td>
   </tr>
 
-  <tr>
-    <td>📦 Data Loaders</td>
-    <td>Bouhmidi Amina Meroua / Labani Nabila Nour El Houda</td>
-    <td>✅ Complete</td>
-    <td>100%</td>
-    <td>TF Generators, data_loader.py</td>
-  </tr>
-
-  <tr>
-    <td>🤖 Model Training (×3)</td>
-    <td>Bouhmidi Amina Meroua / Labani Nabila Nour El Houda</td>
-    <td>✅ Complete</td>
-    <td>100%</td>
-    <td>VGG16, ResNet50, DenseNet121</td>
-  </tr>
-
-  <tr>
-    <td>📈 Model Evaluation & Optimization</td>
-    <td>Bouhmidi Amina Meroua / Labani Nabila Nour El Houda</td>
-    <td>✅ Complete</td>
-    <td>100%</td>
-    <td>ROC analysis, metrics report</td>
-  </tr>
-
-  <tr>
-    <td>🔥 Grad-CAM Interpretability</td>
-    <td>Bouhmidi Amina Meroua / Labani Nabila Nour El Houda</td>
-    <td>✅ Complete</td>
-    <td>100%</td>
-    <td>Clinical heatmaps, GradCAM module</td>
-  </tr>
-
-  <tr>
-    <td>🌍 External Dataset Validation</td>
-    <td>Bouhmidi Amina Meroua / Labani Nabila Nour El Houda</td>
-    <td>✅ Complete</td>
-    <td>100%</td>
-    <td>97.21% sensitivity validation</td>
-  </tr>
-
+  <!-- OTHERS -->
   <tr>
     <td>🖥️ Clinical Streamlit Application</td>
     <td>Miloudi Maroua Amira</td>
@@ -242,6 +214,7 @@ A dual-pathway AI system with a full clinical application:
     <td>100%</td>
     <td>Final report, technical guide, presentations</td>
   </tr>
+
 </table>
 ---
 
