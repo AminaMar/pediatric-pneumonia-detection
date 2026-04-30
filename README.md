@@ -72,7 +72,7 @@ The pipeline spans four major pillars:
 **Pillar 4 — Vital Signs ML Pipeline** *(Kassouar Fatima)*
 - Gradient Boosting classifier for vital signs-based diagnosis
 - CSV preprocessing pipeline and data management
-- Medical explanation engine (`whyvitals.py`)
+
 
 > **Key Achievement:** DenseNet121 achieved **95.01% Sensitivity** and **94.31% Accuracy** on the internal test set, improving to **97.21% Sensitivity** on external validation. The full clinical application integrates both the deep learning model and a Gradient Boosting vital signs classifier into a production-grade Streamlit interface.
 
