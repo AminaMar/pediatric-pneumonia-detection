@@ -104,7 +104,7 @@ The pipeline spans four major pillars:
   <tr>
     <td>📋 <b>Manager</b></td>
     <td><b>Kassouar Fatima</b></td>
-    <td>Gradient Boosting classifier (vital signs), CSV preprocessing pipeline and data management</td>
+    <td>Gradient Boosting classifier (vital signs), CSV preprocessing pipeline and management</td>
   </tr>
   <tr>
     <td>👨‍🏫 Academic Supervisor</td>
