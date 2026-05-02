@@ -883,5 +883,4 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 *Complete pipeline: Data Engineering · Deep Learning · Clinical Application · Project Management*
 
 </div>
-readme.md
-Displaying readme.md.
+
