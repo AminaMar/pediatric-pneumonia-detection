@@ -864,9 +864,10 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 ## 📧 Contact
 
-**Data Engineer:** Bouhmidi Amina Meroua — [GitHub @AminaMar](https://github.com/AminaMar)
-**Deep Learning Engineer:** Labani Nabila Nour El Houda — [GitHub @labaninabila193-code](https://github.com/labaninabila193-code)
+**Data Engineer:** Bouhmidi Amina Meroua — [GitHub @AminaMar](https://github.com/AminaMar)  
+**Deep Learning Engineer:** Labani Nabila Nour El Houda — [GitHub @labaninabila193-code](https://github.com/labaninabila193-code)  
 **Application Developer & Business Model:** Miloudi Maroua Amira — [GitHub @lily01011](https://github.com/lily01011)
+
 
 **Project Repository:** [github.com/AminaMar/pediatric-pneumonia-detection](https://github.com/AminaMar/pediatric-pneumonia-detection)
 
