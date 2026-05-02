@@ -1,4 +1,5 @@
-# 🏥 AI-Powered Pediatric Pneumonia Detection
+
+# AI-Powered Pediatric Pneumonia Detection
 
 <p align="center">
   <img src="docs/images/xray-heart.gif" alt="Medical AI Banner" width="100%">
@@ -21,6 +22,7 @@
 ---
 
 ## 📋 Table of Contents
+
 - [Overview](#-overview)
 - [Team](#-team)
 - [Problem Statement](#-problem-statement)
@@ -62,12 +64,14 @@ The pipeline spans four major pillars:
 - GradCAM clinical interpretability implementation
 - External cross-dataset validation achieving **97.21% sensitivity**
 
-**Pillar 3 — Clinical Application & Business Model** *(Miloudi Maroua Amira)*
-- Streamlit-based clinical decision support application
-- Dual AI diagnostic pathways: DenseNet121 (X-ray) + Gradient Boosting (vital signs)
-- Complete doctor/patient management with zero-infrastructure file-based persistence
-- Real-time nurse monitoring, treatment planning, and PDF report generation
-- Business model design and deployment strategy
+**Pillar 3 — RAG-Based Generative AI, Clinical Application Development & Automation + Business Model** *(Miloudi Maroua Amira — Developer & Business Model)*
+- Designed and implemented a RAG-based clinical reasoning system (FAISS + BM25 + reranking) for patient-specific medical inference
+- Engineered the LLM orchestration pipeline via OpenRouter with structured clinical output (RISK / REASONING / ACTION)
+- Developed the prompt engineering framework with embedded clinical heuristics for reliable AI-assisted decision support
+- Built and integrated the full-stack Streamlit clinical application, connecting AI models, agent modules, and user workflows
+- Implemented automation pipelines including intelligent reasoning workflows and automated medical PDF report generation
+- Designed the zero-infrastructure file-based system architecture enabling deployment in low-resource clinical environments
+- Defined the business model and deployment strategy for scalable, cost-effective adoption
 
 **Pillar 4 — Vital Signs ML Pipeline** *(Kassouar Fatima)*
 - Gradient Boosting classifier for vital signs–based diagnosis
@@ -75,51 +79,20 @@ The pipeline spans four major pillars:
 - Binary probability scoring ∈ [0,1] per patient record (12 clinical features)
 - Feature engineering and data cleaning
 
-
-
 > **Key Achievement:** DenseNet121 achieved **95.01% Sensitivity** and **94.31% Accuracy** on the internal test set, improving to **97.21% Sensitivity** on external validation. The full clinical application integrates both the deep learning model and a Gradient Boosting vital signs classifier into a production-grade Streamlit interface.
 
 ---
 
 ## 👥 Team
 
-<table>
-  <tr>
-    <td align="center"><b>Role</b></td>
-    <td align="center"><b>Name</b></td>
-    <td align="center"><b>Core Responsibilities</b></td>
-  </tr>
-  <tr>
-    <td>🔧 <b>Data Engineer</b></td>
-    <td><b>Bouhmidi Amina Meroua</b></td>
-    <td>Complete data pipeline (EDA → preprocessing → data loaders), 70/15/15 stratified split, class weight computation, augmentation design</td>
-  </tr>
-  <tr>
-    <td>🤖 <b>Deep Learning Engineer</b></td>
-    <td><b>Labani Nabila Nour El Houda</b></td>
-    <td>DenseNet121 / VGG16 / ResNet50 training, threshold optimization (0.260), GradCAM implementation, external dataset validation (97.21% sensitivity), X-ray diagnostic module in app</td>
-  </tr>
-  <tr>
-    <td>💻 <b>Developer & Business Model</b></td>
-    <td><b>Miloudi Maroua Amira</b></td>
-    <td>Built an AI-powered medical app with Streamlit, featuring intelligent data explanations, workflow automation, reporting, and real-world deployment planning.</td>
-  </tr>
-  <tr>
-    <td>📋 <b>Manager</b></td>
-    <td><b>Kassouar Fatima</b></td>
-    <td>Gradient Boosting classifier (vital signs), CSV preprocessing pipeline and management</td>
-  </tr>
-  <tr>
-    <td>👨‍🏫 Academic Supervisor</td>
-    <td>Dr. Abderrahmane Khiat</td>
-    <td>Academic guidance & evaluation</td>
-  </tr>
-  <tr>
-    <td>🏥 Medical Advisor</td>
-    <td>Dr. Aimer Mohammed Djamel Eddine</td>
-    <td>Clinical validation, medical references & advisory</td>
-  </tr>
-</table>
+| Role | Name | Core Responsibilities |
+|------|------|-----------------------|
+| 🔧 **Data Engineer** | **Bouhmidi Amina Meroua** | Complete data pipeline (EDA → preprocessing → data loaders), 70/15/15 stratified split, class weight computation, augmentation design |
+| 🤖 **Deep Learning Engineer** | **Labani Nabila Nour El Houda** | DenseNet121 / VGG16 / ResNet50 training, threshold optimization (0.260), GradCAM implementation, external dataset validation (97.21% sensitivity), X-ray diagnostic module in app |
+| 💻 **Developer & Business Model** | **Miloudi Maroua Amira** | Built an AI-powered medical app with Streamlit, featuring intelligent data explanations, workflow automation, reporting, and real-world deployment planning |
+| 📋 **Manager** | **Kassouar Fatima** | Gradient Boosting classifier (vital signs), CSV preprocessing pipeline and management |
+| 👨‍🏫 Academic Supervisor | Dr. Abderrahmane Khiat | Academic guidance & evaluation |
+| 🏥 Medical Advisor | Dr. Aimer Mohammed Djamel Eddine | Clinical validation, medical references & advisory |
 
 **Institution:** University of Saida, Algeria — Academic Year 2025–2026
 
@@ -128,6 +101,7 @@ The pipeline spans four major pillars:
 ## 🚨 Problem Statement
 
 Pneumonia is a **leading cause of death** in children under 5:
+
 - 📊 **740,000+ deaths** annually worldwide (15% of child mortality)
 - 🏥 **200–300 cases daily** in Algerian emergency departments
 - ⏱️ **6–24 hour** diagnostic delays due to radiologist shortage
@@ -146,81 +120,34 @@ A dual-pathway AI system with a full clinical application:
 - 🔥 **GradCAM Explainability** — Clinical heatmaps showing which lung regions influenced each decision
 - ⚖️ **Strategic Class Balancing** — Computed weights (1.850 / 0.685) via sklearn
 - 🎨 **Intelligent Data Augmentation** — Anatomically-constrained (no vertical flips)
+- 🤖 **RAG-Based Generative AI** — Clinical reasoning chatbot combining patient data and medical literature (FAISS + BM25 + reranking) for evidence-based decision support
+- ⚙️ **Clinical Automation System** — Automated workflows for reasoning, diagnosis support, and patient data processing
+- 📄 **Automated Medical PDF Reports** — Generation of structured patient reports including contact information, medical case, diagnostics, and treatment plans
+- 🗂️ **Patient Data Persistence** — Complete file-based system storing patient records, history, diagnostics, treatments, and documents for long-term tracking
 - 🏥 **EMR Integration Ready** — HL7/FHIR compatible architecture
 - 🖥️ **Full Clinical Application** — Streamlit app: patient registration, dual AI diagnostics, treatment planning, nurse monitoring
+- 🚑 **Emergency Protocol System** — Doctor-to-emergency-doctor communication workflow for critical cases
+- 👨‍👩‍👧 **Parental Guidance Module** — Clear instructions and safety guidance for families in severe or emergency situations
 - 🗄️ **Zero-Infrastructure Deployment** — File-based persistence, no database server required
 
 ---
 
 ## 📊 Project Status
 
-<table>
-  <tr>
-    <th>Phase</th>
-    <th>Lead</th>
-    <th>Status</th>
-    <th>Progress</th>
-    <th>Deliverables</th>
-  </tr>
+| Phase | Lead | Status | Progress | Deliverables |
+|-------|------|--------|----------|--------------|
+| 📊 Data Pipeline (Exploration, Preprocessing, Loaders) | Bouhmidi Amina Meroua | ✅ Complete | 100% | EDA Report, Figures 01–07, Preprocessed Dataset, preprocessing_config.json, TF Data Generators, data_loader.py |
+| 🤖 Deep Learning Pipeline (Training, Evaluation, Interpretability, Validation) | Labani Nabila Nour El Houda | ✅ Complete | 100% | VGG16, ResNet50, DenseNet121, ROC Analysis, Metrics Report, Grad-CAM Heatmaps, External Validation (97.21% sensitivity) |
+| 🖥️ RAG + Clinical Streamlit Application | Miloudi Maroua Amira | ✅ Complete | 100% | Doctor onboarding, patient management, AI diagnostics |
+| 🌿 Vital Signs ML Module | Kassouar Fatima | ✅ Complete | 100% | Gradient Boosting, CSV pipeline, feature engineering |
+| 📝 Reports & Representation | Full Team | ✅ Complete | 100% | Final report, technical guide, presentations |
 
-  <!-- AMINA -->
-  <tr>
-    <td>📊 Data Pipeline (Exploration, Preprocessing, Loaders)</td>
-    <td>Bouhmidi Amina Meroua</td>
-    <td>✅ Complete</td>
-    <td>100%</td>
-    <td>
-      EDA Report, Figures 01–07 <br>
-      Preprocessed Dataset, preprocessing_config.json <br>
-      TF Data Generators, data_loader.py
-    </td>
-  </tr>
-
-  <!-- NABILA -->
-  <tr>
-    <td>🤖 Deep Learning Pipeline (Training, Evaluation, Interpretability, Validation)</td>
-    <td>Labani Nabila Nour El Houda</td>
-    <td>✅ Complete</td>
-    <td>100%</td>
-    <td>
-      VGG16, ResNet50, DenseNet121 <br>
-      ROC Analysis, Metrics Report <br>
-      Grad-CAM Heatmaps <br>
-      External Validation (97.21% sensitivity)
-    </td>
-  </tr>
-
-  <!-- OTHERS -->
-  <tr>
-    <td>🖥️ Clinical Streamlit Application</td>
-    <td>Miloudi Maroua Amira</td>
-    <td>✅ Complete</td>
-    <td>100%</td>
-    <td>Doctor onboarding, patient management, AI diagnostics</td>
-  </tr>
-
-  <tr>
-    <td>🌿 Vital Signs ML Module</td>
-    <td>Kassouar Fatima</td>
-    <td>✅ Complete</td>
-    <td>100%</td>
-    <td>Gradient Boosting, CSV pipeline, feature engineering</td>
-  </tr>
-
-  <tr>
-    <td>📝 Reports & Representation</td>
-    <td>Full Team</td>
-    <td>✅ Complete</td>
-    <td>100%</td>
-    <td>Final report, technical guide, presentations</td>
-  </tr>
-
-</table>
 ---
 
 ## 📁 Dataset
 
 ### Original Dataset
+
 - **Source:** [Kaggle Pediatric Chest X-Ray Pneumonia](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
 - **Size:** 5,863 labeled images
 - **Classes:** NORMAL (1,583) | PNEUMONIA (4,273)
@@ -229,36 +156,11 @@ A dual-pathway AI system with a full clinical application:
 
 ### Preprocessed Dataset (70/15/15 Stratified Split)
 
-<table>
-  <tr>
-    <th>Split</th>
-    <th>NORMAL</th>
-    <th>PNEUMONIA</th>
-    <th>Total</th>
-    <th>Percentage</th>
-  </tr>
-  <tr>
-    <td><b>Training</b></td>
-    <td>1,108 (27.0%)</td>
-    <td>2,991 (73.0%)</td>
-    <td>4,099</td>
-    <td>70%</td>
-  </tr>
-  <tr>
-    <td><b>Validation</b></td>
-    <td>237 (27.0%)</td>
-    <td>641 (73.0%)</td>
-    <td>878</td>
-    <td>15%</td>
-  </tr>
-  <tr>
-    <td><b>Test</b></td>
-    <td>238 (27.1%)</td>
-    <td>641 (72.9%)</td>
-    <td>879</td>
-    <td>15%</td>
-  </tr>
-</table>
+| Split | NORMAL | PNEUMONIA | Total | Percentage |
+|-------|--------|-----------|-------|------------|
+| **Training** | 1,108 (27.0%) | 2,991 (73.0%) | 4,099 | 70% |
+| **Validation** | 237 (27.0%) | 641 (73.0%) | 878 | 15% |
+| **Test** | 238 (27.1%) | 641 (72.9%) | 879 | 15% |
 
 **Configuration:**
 - 📏 Image size: 224×224 pixels
@@ -266,6 +168,7 @@ A dual-pathway AI system with a full clinical application:
 - 🔄 Augmentation: Rotation (±15°), Shift (10%), Zoom (10%), Horizontal flip only
 
 ### External Validation Dataset
+
 - **Source:** [Pneumonia Radiography Dataset](https://www.kaggle.com/datasets/iamtanmayshukla/pneumonia-radiography-dataset)
 - **Size:** 488 images (237 NORMAL, 251 PNEUMONIA)
 - **Purpose:** Cross-dataset validation to test real-world generalization
@@ -299,29 +202,29 @@ A dual-pathway AI system with a full clinical application:
 
 **Actions Taken:**
 
-1. **Dataset Reorganization**
-   - Created 70/15/15 stratified split
-   - Validation set: 16 → 878 images (**54× increase**)
-   - Class distribution (27%/73%) maintained across all three splits
+**1. Dataset Reorganization**
+- Created 70/15/15 stratified split
+- Validation set: 16 → 878 images (**54× increase**)
+- Class distribution (27%/73%) maintained across all three splits
 
-2. **Class Weight Calculation**
-   - Method: `sklearn.utils.class_weight.compute_class_weight('balanced')`
-   - NORMAL (class 0): **1.850** — forces model to penalize missed normals
-   - PNEUMONIA (class 1): **0.685**
-   - Result: model gives 2.7× more learning attention to the minority class
+**2. Class Weight Calculation**
+- Method: `sklearn.utils.class_weight.compute_class_weight('balanced')`
+- NORMAL (class 0): **1.850** — forces model to penalize missed normals
+- PNEUMONIA (class 1): **0.685**
+- Result: model gives 2.7× more learning attention to the minority class
 
-3. **Augmentation Strategy** (anatomically constrained)
-   - Rotation: ±15° (realistic patient positioning variation)
-   - Horizontal/vertical shifts: 10%
-   - Zoom: 10%
-   - Horizontal flip: ✅ (lungs are symmetric)
-   - Vertical flip: ❌ (anatomically incorrect — never applied)
-   - Applied **only to training set** — validation/test are untouched
+**3. Augmentation Strategy** (anatomically constrained)
+- Rotation: ±15° (realistic patient positioning variation)
+- Horizontal/vertical shifts: 10%
+- Zoom: 10%
+- Horizontal flip: ✅ (lungs are symmetric)
+- Vertical flip: ❌ (anatomically incorrect — never applied)
+- Applied **only to training set** — validation/test are untouched
 
-4. **Preprocessing Pipeline**
-   - Resize: 224×224 (required by ImageNet pretrained architectures)
-   - Normalize: [0–255] → [0–1] float32
-   - Format: Grayscale (224, 224, 1)
+**4. Preprocessing Pipeline**
+- Resize: 224×224 (required by ImageNet pretrained architectures)
+- Normalize: [0–255] → [0–1] float32
+- Format: Grayscale (224, 224, 1)
 
 **Deliverables:**
 - [Preprocessing Report](data_engineering/reports/DATA_PREPROCESSING_REPORT.md)
@@ -368,6 +271,7 @@ A dual-pathway AI system with a full clinical application:
 **Lead: Labani Nabila Nour El Houda** ([@labaninabila193-code](https://github.com/labaninabila193-code))
 
 ### Methodology
+
 ```
 Preprocessed Data (from Data Engineer)
        ↓
@@ -393,6 +297,7 @@ External Dataset Validation (488 independent images)
 | 3 | **DenseNet121** ⭐ | **8M** | ✅ | **58 min** |
 
 ### Training Configuration
+
 - **Platform:** Google Colab (T4 GPU)
 - **Framework:** TensorFlow 2.19 / Keras 3.x
 - **Optimizer:** Adam
@@ -419,7 +324,7 @@ Kassouar Fatima developed the machine learning pipeline for vital signs-based pn
 | **Output** | Binary class (0 = Not Sick, 1 = Sick) + probability score |
 | **Top feature** | Confusion — **64.8% importance** |
 
-**Feature Importance Ranking:**
+### Feature Importance Ranking
 
 | Rank | Feature | Importance |
 |---|---|---|
@@ -427,17 +332,6 @@ Kassouar Fatima developed the machine learning pipeline for vital signs-based pn
 | 2 | Fever severity | 12.9% |
 | 3 | Temperature | 9.2% |
 | 4–12 | Remaining 9 features | 13.1% combined |
-
-### Medical Explanation Engine — `whyvitals.py`
-
-A standalone pure-Python medical knowledge base with zero UI dependencies:
-
-- **`FEATURE_EXPLANATIONS`** — maps every `(feature, value)` pair to a clinical note + literature reference (WHO IMCI, IDSA/ATS, BTS, NEJM EPIC study)
-- **`INTERACTION_EXPLANATIONS`** — lambda-based rules detecting clinically significant multi-feature combinations (e.g., high fever + purulent sputum → bacterial pneumonia pattern)
-- **`SCORE_WEIGHTS`** — mirrors model feature importance for the 0–100 risk score
-- **`explain()`** — returns: verdict, score, summary, tags, interaction notes, per-feature explanations
-
-> `whyvitals.py` is fully testable independently of the Streamlit UI — it can be imported into any Python context (REST API, CLI, unit tests) without modification.
 
 ### Input Features (12 Parameters)
 
@@ -458,11 +352,13 @@ A standalone pure-Python medical knowledge base with zero UI dependencies:
 
 ---
 
-## 🖥️ Clinical Application
+## 🖥️ RAG & Automation + Clinical Application
 
 **Developer & Business Model: Miloudi Maroua Amira** ([@lily01011](https://github.com/lily01011))
 
-The clinical application was built and designed by Miloudi Maroua Amira, integrating the AI models trained by Labani Nabila and the preprocessed data pipeline built by Bouhmidi Amina into a complete, production-grade clinical decision support system deployable in any clinic with Python — no database server required. The business model and deployment strategy were also designed by Miloudi Maroua Amira.
+The clinical application was fully designed and engineered by Miloudi Maroua Amira, transforming standalone AI models into a complete intelligent clinical decision support system. The system integrates machine learning, deep learning, and a Retrieval-Augmented Generation (RAG) pipeline into a production-ready application deployable in any clinical environment with zero infrastructure requirements.
+
+Beyond system development, the business model and deployment strategy were also defined by Miloudi Maroua Amira, ensuring real-world usability in low-resource healthcare settings.
 
 ### Dual AI Diagnostic Pathways
 
@@ -471,71 +367,115 @@ The clinical application was built and designed by Miloudi Maroua Amira, integra
 | **Chest X-Ray Diagnosis** | Pediatric chest radiograph (PNG/JPG) | DenseNet121 CNN | PNEUMONIA / NORMAL + GradCAM heatmap + radiological explanation |
 | **Vital Signs Diagnosis** | 12 clinical parameters | Gradient Boosting Classifier | Sick / Not Sick + risk score (0–100) + per-feature medical explanation |
 
-### Key Clinical Features
+### 🧠 Intelligent RAG & Clinical Reasoning Layer (Agent System)
 
-**Doctor & Patient Management**
-- Mandatory doctor profile gate — all clinical features locked until profile is complete
-- Auto-incrementing patient IDs (starting at 1001)
-- Immutable patient records: CSV + formatted PDF on registration
-- Doctor-namespaced data isolation — architecturally impossible to access another doctor's data
+RAG-powered clinical chatbot combining:
+- Patient-specific documents (PDF ingestion)
+- Medical literature knowledge base (FAISS-indexed)
+- Hybrid retrieval:
+  - Semantic search (FAISS embeddings)
+  - Keyword search (BM25)
+  - Cross-encoder reranking (Cohere / FlashRank / fallback)
+- Structured clinical reasoning via prompt engineering:
+  - Output format: RISK / REASONING / ACTION
+  - Embedded clinical inference rules (treatment failure, escalation detection, emergency patterns)
+- Real-time LLM response streaming via OpenRouter API
+- Session-based knowledge base with conversational memory
+- Enables doctor-level decision support, not just prediction
 
-**Vital Signs Diagnostic Module** *(whyvitals.py — medical explanation engine)*
-- 12-parameter clinical form: temperature, SpO₂, cough type, fever severity, shortness of breath, chest pain, fatigue, confusion, crackles, sputum color, age, gender
-- Risk score 0–100 computed from feature importance weights
-- Multi-feature interaction detection (e.g., high fever + purulent sputum → bacterial pneumonia pattern)
-- References: WHO IMCI, IDSA/ATS, BTS, NEJM EPIC study
-- **Top predictive feature: Confusion (64.8% importance)**
+### 🤖 Automation & Clinical Workflow Intelligence
 
-**X-Ray Diagnostic Module** *(whyxray.py — radiology explanation dictionary)*
-- DenseNet121 inference with classification threshold at 0.260
-- GradCAM via `TensorFlow GradientTape` on layer `conv5_block16_concat`
-- 3-panel figure: original / heatmap / overlay rendered inline
-- Three outcome states: PNEUMONIA / NORMAL / uncertain (borderline safety pathway)
-- Radiological sign explanations with cited sources (Stanford CheXNet, Radiopaedia, RSNA, AJR)
+End-to-end automated clinical workflow:
+- Patient registration → diagnosis → treatment → monitoring → reporting
+- Intelligent data aggregation across all modules: diagnostics history, treatments, nurse monitoring tables, uploaded documents
+- Automated reasoning over temporal clinical data trends (not single snapshots)
+- Reduces manual workload while improving clinical consistency
 
-**Treatment Planning**
-- Home management: dynamic medication list, follow-up notes, emergency warning signs, parent handover plan
-- Hospital management: admission notes, nursing instructions, discharge readiness flags (SpO₂, fever-free 24h, oral feeds, improved X-ray)
-- All plans generate a branded PDF report automatically
+### 📄 Automated Medical Report Generation
 
-**Real-Time Nurse Monitoring**
-- Configurable interval timer (seconds / minutes / hours)
-- 15 WHO-aligned monitoring parameters per interval + custom doctor-defined columns
-- Each interval saved as `Check Table N.csv` — append-only, forensically sound
+Full A4 clinical PDF report generation using ReportLab. Automatically compiles:
+- Patient contact information
+- Complete medical case history
+- Diagnostic results (vital + X-ray)
+- Treatment plans (home + hospital)
+- Nurse monitoring timeline
+- Uploaded medical documents
+- Colour-coded clinical tables for readability
+- Timestamped reports for audit trail (`agent_report_<timestamp>.pdf`)
+- Supports clinical handover, documentation, and archiving
 
-### System Architecture (Three-Tier)
+### 🗄️ Patient Data Management & Persistence
 
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                   TIER 1 — PRESENTATION LAYER                   ║
-║  app.py · profile.py · Add_Patient.py · vitaldiagnostique.py   ║
-║  xraydiagnostique.py · Treatment.py · Hospitaltreatment.py     ║
-╚══════════════════════════════╦═══════════════════════════════════╝
-                               ║ function calls only
-╔══════════════════════════════╩═══════════════════════════════════╗
-║                TIER 2 — BUSINESS LOGIC & AI LAYER               ║
-║  profile_db.py  ·  patient_db.py  ·  vitaldiagnostique_db.py   ║
-║  xraydiagnostique_db.py  ·  treatment_db.py                    ║
-║  whyvitals.py (explanation engine)  ·  whyxray.py              ║
-║  Gradient_Boost.pkl  ·  densenet121_best_model.keras            ║
-╚══════════════════════════════╦═══════════════════════════════════╝
-                               ║ pathlib.Path file I/O
-╔══════════════════════════════╩═══════════════════════════════════╗
-║                  TIER 3 — PERSISTENCE LAYER                     ║
-║  data/<Region-Hospital>/<DoctorName>/<PatientID_Name>/          ║
-║  doctor_profile.csv  ·  N-vitaldiagnostic.csv                   ║
-║  home_treatment.csv  ·  hospitalizedtreatment.csv               ║
-║  Check Table N.csv   ·  xray/*.png  ·  *_pdf/ folders           ║
-╚══════════════════════════════════════════════════════════════════╝
-```
+Full file-based EMR-like system (no database required):
+- Structured CSV records for all clinical data
+- Organized patient folders with complete history
+- Stores: diagnostics (append-only history), treatments and hospitalisation records, nurse monitoring intervals, X-ray images, uploaded PDFs
+- Ensures: data traceability, historical integrity, doctor-level data isolation
+- Enables deployment in low-resource environments without infrastructure
+
+### 👩‍⚕️ Enhanced Clinical User Experience
+
+**Emergency Treatment Protocol**
+- Structured doctor-to-emergency-doctor handover logic
+- Critical escalation pathways based on patient condition trends
+
+**Parental Guidance System**
+- Clear instructions for caregivers in severe cases
+- Emergency warning signs and actionable steps
+- Designed for fast clinical decision-making, reduced cognitive load on physicians, and real-world usability in high-pressure scenarios
 
 ### Data Integrity Mechanisms
+
 - **Session gating:** All operations verify active doctor session before any file I/O
 - **Append-only diagnostics:** Sequential `N-vitaldiagnostic.csv` naming — immutable history
 - **Two-step save workflow:** AI results displayed for doctor review before any file is written
 - **Path sanitization:** All folder names sanitized; no OS-reserved characters
 - **UTF-8 enforcement:** Correct handling of Arabic-French patient names
 - **Zero-infrastructure:** Runs on any machine with Python — no network, no database server
+
+### System Architecture
+
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                   TIER 1 — PRESENTATION LAYER                   ║
+║  app.py (Home & Nav Hub)  ·  profile.py  ·  Add_Patient.py      ║
+║  vitaldiagnostique.py  ·  xraydiagnostique.py                   ║
+║  Treatment.py  ·  Hospitaltreatment.py  ·  About_Us.py          ║
+╚══════════════════════════════╦═══════════════════════════════════╝
+                               ║ function calls only
+╔══════════════════════════════╩═══════════════════════════════════╗
+║                TIER 2 — BUSINESS LOGIC & AI LAYER               ║
+║  profile_db.py       ← Session management & auth boundary       ║
+║  patient_db.py       ← Patient CRUD + PDF/CSV generation        ║
+║  vitaldiagnostique_db.py  ← Append-only diagnostic records      ║
+║  xraydiagnostique_db.py   ← X-ray image storage                 ║
+║  treatment_db.py     ← Treatment plans + hospital monitoring    ║
+║  whyvitals.py        ← Vital signs medical explanation engine   ║
+║  whyxray.py          ← Radiology explanation dictionary         ║
+║  Gradient_Boost.pkl  ← GBM inference (scikit-learn)             ║
+║  DenseNet121.keras   ← CNN inference + GradCAM (TensorFlow)     ║
+╚══════════════════════════════╦═══════════════════════════════════╝
+                               ║ imported by Streamlit UI
+╔══════════════════════════════╩═══════════════════════════════════╗
+║              TIER 3 — INTELLIGENT AGENT LAYER (NEW v9)          ║
+║  agentt/layer1.py      ← PDF ingestion → FAISS + BM25 index     ║
+║  agentt/retrieval.py   ← Hybrid cross-KB search + reranking     ║
+║  agentt/prompt_builder.py ← Structured clinical prompt assembly ║
+║  agentt/layer2.py      ← LLM orchestration + streaming (OpenRouter) ║
+║  agentt/report_agent.py ← Patient PDF report generation         ║
+║  agentt/med_kb.py      ← Medical literature KB + FAISS cache    ║
+║  agentt/agent_utils.py ← Shared data-access utilities           ║
+╚══════════════════════════════╦═══════════════════════════════════╝
+                               ║ pathlib.Path file I/O
+╔══════════════════════════════╩═══════════════════════════════════╗
+║                  TIER 4 — PERSISTENCE LAYER                     ║
+║  data/<Region-Hospital>/<DoctorName>/<PatientID_Name>/          ║
+║  doctor_profile.csv  ·  N-vitaldiagnostic.csv                   ║
+║  home_treatment.csv  ·  hospitalizedtreatment.csv               ║
+║  Check Table N.csv   ·  xray/*.png  ·  *_pdf/ folders           ║
+║  agent_report_<timestamp>.pdf  ← Generated by report_agent.py   ║
+╚══════════════════════════════════════════════════════════════════╝
+```
 
 ---
 
@@ -554,11 +494,13 @@ The clinical application was built and designed by Miloudi Maroua Amira, integra
 | **Training Time** | — | **57.97 min** | — |
 
 **Confusion Matrix (Optimized Threshold = 0.260):**
+
 ```
                     Predicted NORMAL    Predicted PNEUMONIA
 Actual NORMAL            220 (TN)              18 (FP)
 Actual PNEUMONIA          32 (FN)             609 (TP)
 ```
+
 > ✅ **Clinical Impact:** Missed pneumonia cases reduced by **50%** (64 → 32) after threshold optimization.
 
 ---
@@ -631,19 +573,21 @@ Grad-CAM highlights which lung regions influenced each AI decision, enabling cli
 <div align="center">
 
 ### ⚠️ PNEUMONIA Case — Correctly Detected
+
 ![Pneumonia Detection](model_training/results/gradcam_visualizations/gradcam_1_PNEUMONIA.png)
 
-**Model Decision:** PNEUMONIA (Confidence: 99.3%)  
-**Grad-CAM:** Highlights consolidation in right lower lobe  
+**Model Decision:** PNEUMONIA (Confidence: 99.3%)
+**Grad-CAM:** Highlights consolidation in right lower lobe
 **Clinical Correlation:** ✅ Correct — matches radiological findings
 
 ---
 
 ### ✅ NORMAL Case — Correctly Classified
+
 ![Normal Classification](model_training/results/gradcam_visualizations/gradcam_4_NORMAL.png)
 
-**Model Decision:** NORMAL (Confidence: 98.8%)  
-**Grad-CAM:** Focuses on central mediastinal structures  
+**Model Decision:** NORMAL (Confidence: 98.8%)
+**Grad-CAM:** Focuses on central mediastinal structures
 **Clinical Correlation:** ✅ Correct — no pathological features highlighted
 
 </div>
@@ -710,6 +654,20 @@ pediatric-pneumonia-detection/
 │       ├── profile.py                 # Doctor profile management
 │       └── About_Us.py                # Team information
 │
+├── agentt/                            # Intelligent agent modules (NEW v9)
+│   ├── layer1.py                      # Document ingestion: text extraction, chunking, FAISS + BM25
+│   ├── retrieval.py                   # Hybrid cross-KB retrieval + Cohere/FlashRank reranking
+│   ├── prompt_builder.py              # Structured clinical prompt with inference heuristics
+│   ├── layer2.py                      # Chatbot orchestration + OpenRouter LLM streaming
+│   ├── report_agent.py                # Full-patient PDF report generator (ReportLab)
+│   ├── med_kb.py                      # Medical literature KB: build, cache, search
+│   ├── agent_utils.py                 # Shared CSV/folder access utilities
+│   ├── requirements.txt               # Agent-specific dependencies
+│   ├── med_kb_cache.pkl               # Auto-generated KB cache (gitignore recommended)
+│   └── refrences/                     # Medical literature source files
+│       ├── diagnostics-15-02244.pdf
+│       └── ijerph-17-06278.pdf
+│
 ├── 🤖 models/
 │   ├── densenet121_best_model.keras   # Fine-tuned CNN (97.21% external sensitivity)
 │   └── Gradient_Boost.pkl            # GBM classifier (Kassouar Fatima)
@@ -757,7 +715,7 @@ cd pediatric-pneumonia-detection
 - [Kaggle Chest X-Ray Pneumonia Dataset](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
 - Place in: `data/chest_xray/`
 
-### 3. Run the Data Engineering Pipeline (Optional — already completed)
+### 3. Run the Data Engineering Pipeline *(Optional — already completed)*
 
 ```bash
 # Run notebooks in order:
@@ -766,7 +724,7 @@ data_engineering/notebooks/02_Data_Preprocessing.ipynb
 data_engineering/notebooks/03_Data_Loaders.ipynb
 ```
 
-### 4. Train Models (Optional — pre-trained models available)
+### 4. Train Models *(Optional — pre-trained models available)*
 
 ```python
 # Open in Google Colab (T4 GPU recommended)
@@ -824,11 +782,11 @@ Model files exceed GitHub's 25MB limit and are hosted on **Google Drive**.
 
 ## 🎓 Academic Context
 
-**Course:** AI in Healthcare  
-**Institution:** University of Saida, Algeria  
-**Academic Year:** 2025–2026  
-**Supervisor:** Dr. Abderrahmane Khiat  
-**Medical Advisor:** Dr. Aimer Mohammed Djamel Eddine (CHU Saida)
+- **Course:** AI in Healthcare
+- **Institution:** University of Saida, Algeria
+- **Academic Year:** 2025–2026
+- **Supervisor:** Dr. Abderrahmane Khiat
+- **Medical Advisor:** Dr. Aimer Mohammed Djamel Eddine (CHU Saida)
 
 ### Team Contribution Summary
 
@@ -836,7 +794,7 @@ Model files exceed GitHub's 25MB limit and are hosted on **Google Drive**.
 |---|---|---|
 | **Bouhmidi Amina Meroua** | Data Engineer | EDA, 70/15/15 stratified split, scientifically computed class weights (1.850/0.685), anatomically-constrained augmentation, optimized TF data loaders |
 | **Labani Nabila Nour El Houda** | Deep Learning Engineer | 3 trained CNN models (VGG16/ResNet50/DenseNet121), ROC threshold optimization (0.260), GradCAM clinical heatmaps, model comparison, external validation (**97.21% sensitivity**) |
-| **Miloudi Maroua Amira** | Developer & Business Model | Complete Streamlit clinical application, UI/UX design, EMR integration strategy, business model & deployment |
+| **Miloudi Maroua Amira** |Generative AI Engineer & Developer & Business Model| Complete RAG & PDF outomation , Streamlit clinical application, UI/UX design, EMR integration strategy, business model & deployment |
 | **Kassouar Fatima** | Manager | Gradient Boosting vital signs classifier, CSV preprocessing pipeline and management |
 | Dr. Abderrahmane Khiat | Academic Supervisor | Academic supervision & evaluation |
 
@@ -867,16 +825,32 @@ Model files exceed GitHub's 25MB limit and are hosted on **Google Drive**.
 - Scientifically computed class weights via sklearn
 - Anatomically-constrained augmentation pipeline
 
-✅ **Complete End-to-End System:**
-- Raw data → engineering → model training → interpretability → clinical application
-- Full Streamlit app with dual AI pathways (X-ray + vital signs)
-- Zero-infrastructure deployment — runs anywhere Python runs
+✅ **Complete End-to-End Clinical System:**
+- Full pipeline: raw data → preprocessing → model training → explainability → deployment
+- Dual AI diagnostic system: X-ray (Deep Learning) + Vital Signs (Machine Learning)
+- Fully functional Streamlit-based clinical application used as a real decision support tool
+- Zero-infrastructure architecture — deployable in any clinic without a database
 
-✅ **Documentation & Representation:**
+✅ **RAG & Intelligent Automation Integration (Major Contribution):**
+- Implementation of a Retrieval-Augmented Generation (RAG) clinical chatbot
+- Combines patient data + medical literature for evidence-based reasoning
+- Hybrid retrieval: FAISS + BM25 + reranking
+- Automated clinical PDF report generation including patient identity, medical case, diagnostics, and treatment plans
+- Full patient data lifecycle management
+- Structured storage of history, diagnostics, treatments, and monitoring records in files
+- Intelligent automation of clinical reasoning assistance, report generation, and data organization and traceability
+
+✅ **Enhanced Clinical User Experience (UX Innovation):**
+- Emergency protocol system (Doctor → Emergency Doctor handover workflow)
+- Parental guidance module with clear instructions for handling critical and high-risk situations at home
+- Real-time nurse monitoring system with structured tracking tables
+- Explainable AI outputs with clinical justification, not just predictions
+
+✅ **Documentation & Professional Delivery:**
 - 3 detailed data engineering reports
-- Complete notebooks for all phases
-- Comprehensive academic final report
-- Project presentations and team reports
+- Complete notebooks for all ML/DL phases
+- Full academic final report
+- Structured project presentations and technical documentation
 
 ---
 
@@ -890,8 +864,8 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 ## 📧 Contact
 
-**Data Engineer:** Bouhmidi Amina Meroua — [GitHub @AminaMar](https://github.com/AminaMar)  
-**Deep Learning Engineer:** Labani Nabila Nour El Houda — [GitHub @labaninabila193-code](https://github.com/labaninabila193-code)  
+**Data Engineer:** Bouhmidi Amina Meroua — [GitHub @AminaMar](https://github.com/AminaMar)
+**Deep Learning Engineer:** Labani Nabila Nour El Houda — [GitHub @labaninabila193-code](https://github.com/labaninabila193-code)
 **Application Developer & Business Model:** Miloudi Maroua Amira — [GitHub @lily01011](https://github.com/lily01011)
 
 **Project Repository:** [github.com/AminaMar/pediatric-pneumonia-detection](https://github.com/AminaMar/pediatric-pneumonia-detection)
@@ -902,9 +876,11 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 **University of Saida, Algeria — 2025–2026**
 
-*This project addresses a critical healthcare challenge in Algeria through state-of-the-art AI,*  
+*This project addresses a critical healthcare challenge in Algeria through state-of-the-art AI,*
 *aligned with the National Digital Health Strategy.*
 
 *Complete pipeline: Data Engineering · Deep Learning · Clinical Application · Project Management*
 
 </div>
+readme.md
+Displaying readme.md.
